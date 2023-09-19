@@ -2,7 +2,7 @@
 title: "Problem Set 1"
 subtitle: "Due date: 18 September"
 format: 
-  html:
+  pdf:
     self-contained: true
 editor: visual
 execute: 
@@ -37,7 +37,7 @@ for (package in requiredPackages)
   
 }
 
-invisible(lapply(requiredPackages, require, character.only = TRUE))
+invisible(lapply(requiredPackages, require, character.only = TRUE, quietly = T))
 rm(list=ls())
 ```
 
