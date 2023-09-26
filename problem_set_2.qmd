@@ -2,7 +2,7 @@
 title: "Problem Set 2"
 subtitle: "Due date: 25 September"
 format: 
-  html:
+  pdf:
     self-contained: true
 toc: true
 editor: visual
