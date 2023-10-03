@@ -160,6 +160,6 @@ datasummary_crosstab(presvote ~ ageCategorical, data = dat)
 
 Based on the crosstab, we can see that older people voted a little more in favor of bush compared to Kerry, together. but there was a strong showing for Kerry amongst the very old category.
 
-A. Conditional distribution for Kerry is 16% 41-50 category
+A. Conditional distribution for Kerry is 16% among 41-50 category
 
 B. Conditional distribution for Bush is 20.4% among the 41-50 category
