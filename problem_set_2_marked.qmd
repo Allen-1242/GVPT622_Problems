@@ -82,7 +82,7 @@ ggplot(data = data, aes(x=libpct_m, y=womleg_2015)) +
 ```
 
 ::: {.callout-tip title="HG comments"}
-I would recommend sticking with the default solid dot. It is easier to see where the center point of the point is, allowing us to better visualize the distribution of the data across the two variables. 
+I would recommend sticking with the default solid dot. It is easier to see where the center point of the point is, allowing us to better visualize the distribution of the data across the two variables.
 :::
 
 Based on the scatter plot, I have added two trend lines , one linear and the other non-linear to see the variable relationships. Based on the upward movement of lines, we can see that the two variables are positively linked.
@@ -97,7 +97,7 @@ $$
 $$
 
 ::: {.callout-tip title="HG comments"}
-Quarto tip: To add a latex functions chunk, you only need to include the dollar sign boundaries.  
+Quarto tip: To add a latex functions chunk, you only need to include the dollar sign boundaries.
 :::
 
 Pearson correlation is used in order to determine the strength of association between two continuous variables.
@@ -125,7 +125,7 @@ modelsummary::modelsummary(lm_obj)
 ```
 
 ::: {.callout-tip title="HG comments"}
-A professionally formatted table will include meaningful variable names. You should change `libpct_m` to something that is easier to interpret. You can use the `coef_rename` argument to do this.  
+A professionally formatted table will include meaningful variable names. You should change `libpct_m` to something that is easier to interpret. You can use the `coef_rename` argument to do this.
 :::
 
 Model equation: womleg_2015 = libpct_m \* 1.145986 + 1.523990
@@ -135,7 +135,7 @@ Don't forget your error: $\epsilon$.
 :::
 
 ::: {.callout-tip title="HG comments"}
-Remember, you can use [in-line coding](https://quarto.org/docs/get-started/computations/rstudio.html#inline-code) to programmatically print out the model coefficients. 
+Remember, you can use [in-line coding](https://quarto.org/docs/get-started/computations/rstudio.html#inline-code) to programmatically print out the model coefficients.
 :::
 
 Interpretation:
@@ -143,17 +143,17 @@ Interpretation:
 The intercept term, in this case 1.523 is the value the model returns when all the variables are zero. This means that if the state has zero liberals, there would be 1.5% of the state legislators being women.
 
 ::: {.callout-tip title="HG comments"}
-Just be a touch more careful with your language: the intercept term is the predicted value of the dependent variable when all of the independent variables are equal to zero. Your interpretation is correct. 
+Just be a touch more careful with your language: the intercept term is the predicted value of the dependent variable when all of the independent variables are equal to zero. Your interpretation is correct.
 :::
 
 ::: {.callout-tip title="HG comments"}
-Your interpretation is correct. But remember to always specify that these predicted values are what we expect on average.  
+Your interpretation is correct. But remember to always specify that these predicted values are what we expect on average.
 :::
 
 The coefficient for the percentage term is 1.45. This means that on average an increase of percentage of liberals is almost directly related to the percentage of women legislators in 2015.
 
 ::: {.callout-tip title="HG comments"}
-A very innocent typo: the coefficient for `libpct_m` is `r tidy(lm_obj) |> filter(term == "libpct_m") |> pull(estimate) |> round(2)`. You can use in-line coding to reduce the risk of typos. 
+A very innocent typo: the coefficient for `libpct_m` is `r tidy(lm_obj) |> filter(term == "libpct_m") |> pull(estimate) |> round(2)`. You can use in-line coding to reduce the risk of typos.
 :::
 
 Although we should note that regression results that are based on percentages should not be directly interpreted in this manner.
@@ -185,7 +185,7 @@ Think RSS.
 :::
 
 ::: {.callout-tip title="HG comments"}
-Make sure to look at your rendered document to ensure that your final submission includes all of your work. I can't see your comments in the rendered pdf, so I can't see what each of these numbers refers to. 
+Make sure to look at your rendered document to ensure that your final submission includes all of your work. I can't see your comments in the rendered pdf, so I can't see what each of these numbers refers to.
 :::
 
 Ans:
@@ -267,18 +267,18 @@ Ans:
 datasummary_crosstab(obama_win12 ~ gun_rank3, data = data)
 ```
 
-We do note that the number of observations are not enough to generate any meaningful understanding. However, with just basing our analysis on the crosstable, we can see that on average Obama won in states that had far greater gun control restrictions. 
+We do note that the number of observations are not enough to generate any meaningful understanding. However, with just basing our analysis on the crosstable, we can see that on average Obama won in states that had far greater gun control restrictions.
 
-54% of all states that had high control laws elected Obama. 
+54% of all states that had high control laws elected Obama.
 
 ::: {.callout-tip title="HG comments"}
-You are making a conditional statement about states that had high control laws, so you need to take the percentage of the states that elected Obama within that population. Of the states with more restrictive gun control laws (of which there were 15), 14 (or `r scales::percent(14/15)`) elected Obama. 
+You are making a conditional statement about states that had high control laws, so you need to take the percentage of the states that elected Obama within that population. Of the states with more restrictive gun control laws (of which there were 15), 14 (or `r scales::percent(14/15)`) elected Obama.
 :::
 
-The contrast is even great for less restrictive where 75% of all states with less restrictive laws did not elect him. 
+The contrast is even great for less restrictive where 75% of all states with less restrictive laws did not elect him.
 
 ::: {.callout-tip title="HG comments"}
-Of the states with less restrictive gun control laws (of which there were 21), 18 (or `r scales::percent(18/21)`) did not elect Obama. 
+Of the states with less restrictive gun control laws (of which there were 21), 18 (or `r scales::percent(18/21)`) did not elect Obama.
 :::
 
 This suggests are strong relationship between the two variables.
@@ -359,7 +359,7 @@ datasummary_crosstab(dem_adv ~ abort_rank3, data = data)
 ```
 
 ::: {.callout-tip title="HG comments"}
-This is good. I would make sure that you convert your categorical variable into an ordered factor so that it orders itself in a meaningful way: low, medium, high. 
+This is good. I would make sure that you convert your categorical variable into an ordered factor so that it orders itself in a meaningful way: low, medium, high.
 :::
 
 ### Part C
