@@ -224,7 +224,7 @@ Race: Nominal
 Age: Ordinal
 
 ::: {.callout-tip title="HG comments"}
-You're right that survey often ask for age within bins (making this an ordinal categorical variable) but that common treatment of the variable was not specified in the question. If they are just asking for people's ages, that's a continuous variable.  
+You're right that survey often ask for age within bins (making this an ordinal categorical variable) but that common treatment of the variable was not specified in the question. If they are just asking for people's ages, that's a continuous variable.
 :::
 
 Household Income: Continuous
