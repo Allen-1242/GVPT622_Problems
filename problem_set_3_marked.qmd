@@ -14,7 +14,7 @@ Please upload your completed assignment to the ELMs course site (under the assig
 **Total points: 30**
 
 ::: {.callout-tip title="HG comments"}
-23/30 
+23/30
 :::
 
 ```{r}
@@ -49,18 +49,20 @@ rm(list=ls())
 *Points: 10*
 
 ::: {.callout-tip title="HG comments"}
-10/10. Thorough answer. Well done. 
+10/10. Thorough answer. Well done.
 :::
 
 Suppose I want to examine the hypothesis that consuming political news coverage from cable network channels (e.g., CNN, MSNBC, Fox News, etc.) causes citizens to have less trust in government than if they were to consume it from mainstream print media (e.g., New York Times, Wall Street Journal, etc.). What is more, suppose that I believe that this effect is greatest among "young" citizens. Design the contours of an experiment to test this proposition (and be sure to sketch the key elements of the experimental design). Second, briefly describe any significant shortcomings that the experimental design might have.Ans:
 
 Ans:
 
-This question has two parts, one to see the effects of network media vs print media in shaping government trust. The second part of the question wants see if this effect is the greatest amougst 'young' citizens.
+This question has two parts, one to see the effects of network media vs print media in shaping government trust. The second part of the question wants see if this effect is the greatest amongst 'young' citizens.
 
 [Population definition:]{.underline}
 
 I propose a stratified design, splitting participants into 'young' and 'mature' categories. With young being defined as 0-29 years of age and mature being 30+[^1]. Participants can be recruited via online forms. We aim to get a population of about 80 participants equally split into these two categories.
+
+[^1]: https://circle.tufts.edu/2022-election-center
 
 [Survey Questions:]{.underline}
 
@@ -75,8 +77,6 @@ We can randomize the split between the categories to create our test and control
 [Hypothesis:]{.underline}
 
 We assume that the groups containing only network watchers will show a significant drop in trust compared to the control group. We should also see that there is no compareable significant drop in trust from those who watch print media.
-
-[^1]: https://circle.tufts.edu/2022-election-center
 
 \[2\] https://www.markhw.com/blog/control-size
 
@@ -111,7 +111,7 @@ D.  A sample of 75 randomly selected countries' educational funding levels for e
 
 Ans:
 
-A. 1. Sampling Variability: The sample is not randomized at at and draws from only a section of the world. It also does not address if a country was a democracy or not at the time of the observation. 
+A. 1. Sampling Variability: The sample is not randomized at at and draws from only a section of the world. It also does not address if a country was a democracy or not at the time of the observation.
 
 ::: {.callout-tip title="HG comments"}
 The sampling variability of a statistic refers to how much the statistic varies from sample to sample. This sample will have no sampling variability. If I pull repeated samples of educational funding levels for every country in Europe for each of the last 100 years, I will get the same values each sample. There will be no variability.
@@ -124,47 +124,43 @@ B. 1. Sampling Variability: The sample is not large enough to hold for the rest 
 2.  Source of Bias: The countries data will be skewed depending on the 5 countries picked. 10 years is also not a large enough time compared to most countries existence, as most countries are older than this.
 
 ::: {.callout-tip title="HG comments"}
-A statistic is biased if the long-term average value of the statistic is not the parameter it is estimating. If we were to take many, many different 5 country random samples, our estimate of funding of education institutions should approach that of the population. This sample is not biased. 
+A statistic is biased if the long-term average value of the statistic is not the parameter it is estimating. If we were to take many, many different 5 country random samples, our estimate of funding of education institutions should approach that of the population. This sample is not biased.
 :::
 
-```{=html}
 <!-- -->
-```
+
 C.  
 
-```{=html}
 <!-- -->
-```
+
 1.  Sampling Variability: The sample only takes for two countries. Educational administrators may be a good source if it is across many countries.
 
 ::: {.callout-tip title="HG comments"}
-If we were to administer many different surveys of all educational administrators in these countries, we should get very similar responses each time. If we only surveyed a sample of all educational administrators in these countries, we might get more sample variability; however, you would need to specify that this was a sample of those administrators.  
+If we were to administer many different surveys of all educational administrators in these countries, we should get very similar responses each time. If we only surveyed a sample of all educational administrators in these countries, we might get more sample variability; however, you would need to specify that this was a sample of those administrators.
 :::
 
 2.  Source of Bias: The sample size is too small. Also there is no definition of the country being a democracy or not, this skews results.The time period is also not large enough to ensure there is no bias.
 
 ::: {.callout-tip title="HG comments"}
-Correct that Russia may not be representative of all non-democracies and the US may not be representative of demoracies, so our estimate of their levels of funding of education institutions may be different from that of our population. 
+Correct that Russia may not be representative of all non-democracies and the US may not be representative of demoracies, so our estimate of their levels of funding of education institutions may be different from that of our population.
 :::
 
-```{=html}
 <!-- -->
-```
+
 D.  
 
-```{=html}
 <!-- -->
-```
+
 1.  Sampling Variability: it has a good number of countries, but it has not taken into account if the country is a democracy or not.
 
 ::: {.callout-tip title="HG comments"}
-This is a high proportion of our populations (democracies and non-democracies), so we should see similar estimates from repeated random samples of 75 countries. There should be low sampling variation.   
+This is a high proportion of our populations (democracies and non-democracies), so we should see similar estimates from repeated random samples of 75 countries. There should be low sampling variation.
 :::
 
 2.  Source of bias: There have been more than 2/3rds countries as democracies compared to non-democracies in the last 25 years. Pure randomization might not yield good results when one of the classes is so small.
 
 ::: {.callout-tip title="HG comments"}
-This is more a point about sampling variability. The random sample of a countries globally should, on average, reflect the distribution of democracies/non-democracies globally. We should therefore, on average, get roughly 25 non-democracies in our random sample (1/3 of 75). This may not be a large enough sample to get an accurate sense of the level of funding of education institutions of non-democracies.  
+This is more a point about sampling variability. The random sample of a countries globally should, on average, reflect the distribution of democracies/non-democracies globally. We should therefore, on average, get roughly 25 non-democracies in our random sample (1/3 of 75). This may not be a large enough sample to get an accurate sense of the level of funding of education institutions of non-democracies.
 :::
 
 ## Question 3
@@ -217,18 +213,17 @@ datasummary_crosstab(presvote ~ ageCategorical, data = dat)
 Based on the crosstab, we can see that older people voted a little more in favor of bush compared to Kerry, together. but there was a strong showing for Kerry amongst the very old category.
 
 ::: {.callout-tip title="HG comments"}
-This phrasing suggests that you should look across columns, rather than rows. For example, within the 61+ yo category (of which there were 100), 55% voted for Kerry and 45% voted for Bush. Within the 18-30 yo group (of which there were 73), `r scales::percent(42/73)` voted for Kerry and `r scales::percent(31/73)` voted for Bush. But you have provided the right interpretation of the hypothesis. 
+This phrasing suggests that you should look across columns, rather than rows. For example, within the 61+ yo category (of which there were 100), 55% voted for Kerry and 45% voted for Bush. Within the 18-30 yo group (of which there were 73), `r scales::percent(42/73)` voted for Kerry and `r scales::percent(31/73)` voted for Bush. But you have provided the right interpretation of the hypothesis.
 :::
 
 A. Conditional distribution for Kerry is 16% among 41-50 category
 
 ::: {.callout-tip title="HG comments"}
-The question asks for the conditional distribution of respondents who are 41-50 that voted for Kerry. In other words, what is the proportion of 41-50 year olds who voted for Kerry? 30 of the 70 (or `r round(30/70, 2)`) 41-50 year olds in the survey voted for Kerry. 
+The question asks for the conditional distribution of respondents who are 41-50 that voted for Kerry. In other words, what is the proportion of 41-50 year olds who voted for Kerry? 30 of the 70 (or `r round(30/70, 2)`) 41-50 year olds in the survey voted for Kerry.
 :::
 
 B. Conditional distribution for Bush is 20.4% among the 41-50 category
 
 ::: {.callout-tip title="HG comments"}
-40 of the 70 (or `r round(40/70, 2)`) 41-50 year olds in the survey voted for Bush. 
+40 of the 70 (or `r round(40/70, 2)`) 41-50 year olds in the survey voted for Bush.
 :::
-
