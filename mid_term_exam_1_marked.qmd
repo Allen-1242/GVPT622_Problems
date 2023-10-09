@@ -1,0 +1,685 @@
+---
+title: "Mid-Term Exam #1"
+subtitle: "Due date: 6 October (11:59 pm)"
+format: 
+  html:
+    self-contained: true
+editor: visual
+execute: 
+  echo: true
+---
+
+Please read all of the questions and tables carefully and follow all instructions. Each question has an allotted point value. Be as thorough and specific as possible; extra calculations and incorrect information, even in the presence of correct information, will result in point deductions. Be sure to show all formulas and all necessary work to answer the questions. You may upload your completed exam to the Elms course site (attach to Exam #1).
+
+::: callout-note
+While this is an open-note exam, you are not to receive assistance from anyone else. As usual, the Honor Code applies.
+:::
+
+::: {.callout-tip title="HG comments"}
+24.5/35
+:::
+
+```{r}
+library(data.table)
+library(modelsummary)
+library(ggplot2)
+```
+
+## Conceptual Questions
+
+**Total points: 15**
+
+Please include all work (and computations) necessary to answer the questions.
+
+### Question 1
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+1/1
+:::
+
+The following is a list of observed values, ordered from lowest to highest: 62, 63, 63, 64, 66, 67, 68, 68, 69, 70, 71, 72, 72, 74, 75, 76. What is an accurate five-number summary for these data?
+
+Ans 1:
+
+```{r}
+#The five number summary 
+Number_values <- c(62, 63, 63, 64, 66, 67, 68, 68, 69, 70, 71, 72, 72, 74, 75, 76)
+summary(Number_values)[-4]
+```
+
+### Question 2
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+1/1
+:::
+
+Suppose that the median, Q1, and Q3 from question #1 is an accurate representation of a second (hypothetical) distribution. Based on what this information tells you about this second distribution, which of the following numbers would be a suspected outlier?
+
+A.  76
+B.  62
+C.  83
+D.  Both (A) and (C)
+E.  All of the above
+F.  None of the above, or cannot be determined from the information given.
+
+Ans 2:
+
+Based on box plot outlier treatment, we can take any value 1.5 times the IQR above the third quartile or 1.5 times the IQR below the second quartile as outliers.
+
+Above outlier:
+
+```{r}
+#IQR = Q3 - Q1
+
+Q1 = 65.5
+Q3 = 72.0
+
+IQR = Q3 - Q1
+
+#Hence the IQR is: 
+IQR
+```
+
+```{r}
+Lower_bound = Q1 - 1.5 * IQR
+Upper_bound = Q3 + 1.5 * IQR
+
+if((76 < Lower_bound) || (76 > Upper_bound))
+{
+  print('76 is an outlier')
+}
+
+if((62 < Lower_bound) || (62 > Upper_bound))
+{
+  print('62 is an outlier')
+}
+
+if((83 < Lower_bound) || (83 > Upper_bound))
+{
+  print('83 is an outlier')
+}
+```
+
+Based on the above information the correct option is:
+
+C. 83 is higher than the upper bound and hence is a suspected outlier
+
+### Question 3
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+1/1
+:::
+
+There is a group of three children with the following ages: 3, 4, and 5. If a 6-year-old child joins the group, what will happen to the mean and standard deviation of the group's age?
+
+```{r}
+Previous_mean <- mean(c(3, 4, 5))
+Previous_sd <- sd(c(3, 4, 5))
+
+New_mean <- mean(c(3, 4, 5, 6))
+New_sd <- sd(c(3, 4, 5, 6))
+
+Mean_sd_df <- data.frame(matrix(ncol = 2, nrow = 2))
+colnames(Mean_sd_df) <- c('Before_six_year_old_addition', 'After_six_year_old_addition')
+rownames(Mean_sd_df) <- c('Mean', 'Standard_Deviation')
+
+Mean_sd_df[1,1] <- Previous_mean
+Mean_sd_df[2,1] <- Previous_sd
+Mean_sd_df[1,2] <- New_mean
+Mean_sd_df[2,2] <- New_sd
+
+Mean_sd_df
+```
+
+Hence with the inclusion of the new 6 year old child , both the mean and the standard deviation increases.
+
+### Question 4
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+1/1
+:::
+
+If I estimate an OLS regression and obtain a $R^2$ of 0.40 where the Total Sum of Squares of 4,150, what does the Residual Sum of Squares equal?
+
+Ans 4:
+
+The R2 value can also be calculated as 1 - RSS/TSS
+
+```{r}
+#Hence RSS can be written as: 
+RSS = (1 - 0.40) * 4150
+
+print( paste("RSS value is: ", RSS)) 
+```
+
+### Question 5
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+0/1
+:::
+
+The distribution of some variable has a median that is smaller than its mean. Which of the following statements about the distribution's shape is most consistent with this information?
+
+A.  The shape of the distribution would be symmetric
+B.  The shape of the distribution would be skewed left
+C.  The shape of the distribution would be skewed right
+D.  None of the above -- cannot be determined from the information given.
+
+Ans 5:
+
+B. The distribution is more skewed to the left
+
+::: {.callout-tip title="HG comments"}
+The distribution of a variable that has a median that is smaller than its mean is a right-skewed distribution. 
+:::
+
+### Question 6
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+0.5/1
+:::
+
+Suppose I want to test the hypothesis that the U.S. public's approval of the president is higher when people have more positive perceptions of the U.S. economy. To test this hypothesis, I conduct a survey of individual-level attitudes. Which of the following research design strategies should I expect to exhibit both the greatest sampling variability (in the context of repeated sampling) and the lowest degree of expected sampling bias?
+
+A.  A random sample of 1,200 people from a list of all U.S. residential addresses
+B.  A random sample of 600 people from a list of all registered students at the University of Maryland
+C.  A random sample of 1,200 people from a list of all registered students at the University of Maryland
+D.  A random sample of 600 people from a list of all U.S. residential addresses.
+
+Ans 6:
+
+For this sort of hypothesis testing we require a sample size that is drawn from the entire US population without any internal bias.
+
+A. A random sample of 1,200 people from a list of all U.S. residential addresses
+
+::: {.callout-tip title="HG comments"}
+Sampling variability increases as your sample size decreases, holding all else constant. Remember, it measures how spread out the sample statistic is from multiple repeated samples from your population. Higher sampling variability means more spread out sample statistics. Therefore, the correct answer is D.
+:::
+
+### Question 7
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+0.5/1
+:::
+
+The median age of ten people in a room is 50 years. One 40-year-old person leaves the room. What can we expect will happen to the median age for the remaining nine people? Do we know the median age of those nine people; if so, what is it?
+
+Ans 7:
+
+We cannot estimate the median value , the median value shifts to the right
+
+::: {.callout-tip title="HG comments"}
+Almost! The median could also remain the same. 
+
+If two or more people in the group are 50 years old, the median will remain at 50. For example:
+
+```{r}
+
+age_dist <- c(40, 42, 44, 46, 50, 50, 54, 56, 58, 60)
+
+median(age_dist)
+```
+
+Removing the 40 year old increases the median to the next age above 50 years old in the group (which is 50 years old):
+
+```{r}
+
+new_age_dist <- c(42, 44, 46, 50, 50, 54, 56, 58, 60)
+
+median(new_age_dist)
+```
+:::
+
+### Question 8
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+0.5/1
+:::
+
+The mean age of ten people in a room is 50 years. One 70-years-old person leaves the room. What can we expect will happen to the mean age for the remaining nine people? Do we know the mean age of those nine people; if so, what is it?
+
+Ans: 8
+
+Yes we do the mean will shift to the left. the mean is 45.5.
+
+::: {.callout-tip title="HG comments"}
+The mean age of the group will decrease to 47.78 years.
+
+The mean is calculated as follows:
+
+$$
+\bar{x} = \frac{\sum{x_i}}{n}
+$$
+
+Where $x_i$ is every individual value and $n$ is the number of observations.
+
+Therefore, the original mean of the group is calculated as follows:
+
+$$
+50 = \frac{\sum{x_i}}{10}
+$$
+
+We can calculate the sum of the ages of the original group: 
+
+$$
+\sum{x_i} = 500
+$$
+
+From this sum of ages, we remove on 70 year old: 
+
+$$
+\sum{x_{i-1}} = 430
+$$
+
+And we can calculate the new average: 
+
+$$
+\frac{430}{9} = 47.78
+$$
+:::
+
+### Question 9
+
+*1 point*
+
+::: {.callout-tip title="HG comments"}
+0/1
+:::
+
+Which of the following sets of numbers has the largest standard deviation?
+
+A.  2, 4, 6, 8
+B.  7, 8, 9, 10
+C.  5, 5, 5, 5
+D.  1, 2, 3, 5
+
+```{r}
+sd_1 = sd(c(2, 4, 6, 8))
+sd_2 = sd(c(7, 8, 9, 10))
+sd_3 = sd(c(5, 5, 5, 5))
+sd_4 = sd(c(1, 2, 3, 5))
+
+max(sd_1, sd_2, sd_3, sd_4)
+```
+
+The max value is option C
+
+::: {.callout-tip title="HG comments"}
+That's the smallest SD: it has no variation. The largest spread sits with A. 
+:::
+
+### Question 10
+
+*6 points*
+
+::: {.callout-tip title="HG comments"}
+3/6
+:::
+
+I hypothesize that people with greater social trust are more likely to turnout to vote in American national elections. I use data from the 2012 General Social Survey to examine how respondents' self-reported level of social trust might be correlated with their decisions to vote. In particular, I use the `social_trust` variable (i.e., a 4-point ordinal indicator of social trust -- larger values reflect greater trust) and the `vote08` variable (i.e., a dichotomous indicator where a `1` indicates that the respondent voted) to test my hypothesis.
+
+Complete the cross-tab below so that you may properly evaluate my hypothesis. Briefly interpret the results of your completed cross-tab. Do the data suggest that social trust is related to voting in 2008? Be sure to explain the nature of the relationship (or lack thereof, if relevant).
+
+::: callout-note
+Table entries represent raw counts of observations within each cell.
+:::
+
+```{r}
+#Creating the table:
+Cross_tab_data <- as.data.frame(matrix(data = NA, nrow = 4, ncol = 3))
+names(Cross_tab_data) <- c('Social Trust', 'Vote08_1', 'Vote08_0')
+
+Cross_tab_data[1,1] <- 0
+Cross_tab_data[1,2] <- 257
+Cross_tab_data[1,3] <- 137
+Cross_tab_data[2,1] <- 1
+Cross_tab_data[2,2] <- 194
+Cross_tab_data[2,3] <- 93
+Cross_tab_data[3,1] <- 2
+Cross_tab_data[3,2] <- 192
+Cross_tab_data[3,3] <- 56
+Cross_tab_data[4,1] <- 3
+Cross_tab_data[4,2] <- 240
+Cross_tab_data[4,3] <- 30
+
+Cross_tab_data
+```
+
+Based on the above data, we can see that the higher the social trust, the less likely people would would vote. However I do not see the effect to be continuous, even on lower trust, there was significant voting.
+
+::: {.callout-tip title="HG comments"}
+We should always look at proportions within categories when using a cross tab. This allows us to see how the distribution of our categorical variable changes as we move across our dependent variable. 
+
+```{r}
+modelsummary::datasummary_crosstab(social_trust ~ voted08, data = tidyr::drop_na(poliscidata::gss, social_trust, voted08))
+```
+
+Do the data suggest that social trust is related to voting in 2008? Across all levels of social trust, a greater proportion of people voted than did not vote in the 2008 presidential election. However, the proportion of people who did vote increases with their level of social trust. Only 65.2% of people with the lowest level of social trust voted in this election. 88.9% of people with the highest level of social trust voted in this election. This suggests that as a individual's level of social trust increases, so too does the probability that they will vote.
+:::
+
+## Applied Questions
+
+Please include your R code. All data sets referenced below are available through the `poliscidata` R-package.
+
+**Total points: 20**
+
+### Question 1
+
+*10 points total*
+
+::: {.callout-tip title="HG comments"}
+7.5/10
+:::
+
+Use the `states` dataset (the U.S. state is the unit of analysis) and estimate a bivariate regression where the size of a state's urban population (`urban`) explains variation in abortion attitudes (`permit`) and report the results in a professionally formatted table. The variable `permit` measures the percentage (on a 0-to-100 scale) of a state's population that says abortion should always be allowed. The variable `urban` measures the percentage (on a 0-to-100 scale) of a state's population in an urban area. Answer the following questions.
+
+A.  Interpret the effect of the independent variable on the dependent variable. *2 points*
+
+B.  Interpret the estimate of the intercept. Is it substantively meaningful to interpret this coefficient on its own? Explain why, or why not. *2 points*
+
+C.  Compute the residual sum of squares for the following two observations combined: (1) California; and (2) Texas. *2 points*
+
+D.  How well does the model fit the data (i.e., how well can we explain abortion attitudes with this model?) *2 points*
+
+E.  Is the relationship between the independent and dependent variable causal? Why or why not? *2 points*
+
+Ans 1:
+
+```{r}
+States_data <- poliscidata::states
+
+#Creating the linear model
+states_linear_model <- lm(permit ~ urban, data = States_data)
+modelsummary::modelsummary(states_linear_model)
+```
+
+::: {.callout-tip title="HG comments"}
+Please make sure to always include meaningful variable labels in your professionally formatted tables. `urban` is not meaningful for your readers. 
+:::
+
+The variable 'urban' has a positive coefficient as well as being statistically significant. This means that the variable has a significant and positive effect on abortion attitudes. The Rsquared and the Adjusted Rsquared values are not very high however, this means that there is significant variance that is not being explained.
+
+::: {.callout-tip title="HG comments"}
+1/2
+:::
+
+::: {.callout-tip title="HG comments"}
+How much does the predicted value of `permit` increase with every one unit increase in the `urban` variable? 
+:::
+
+2.  The intercept term is the predicted value of the dependent variable when all the independent terms are equal to zero. In this case it is 9.639, that means that when the urban value is zero, this will be the percentage that says that abortion should be allowed. Intercepts should generally be carefully evaluated in regression situations as they are just a mathematical optimization. In this case, it seems alright to interpret the variable, as it indicates the abortion acceptance rate in a completely rural state.
+
+::: {.callout-tip title="HG comments"}
+1/2
+:::
+
+::: {.callout-tip title="HG comments"}
+The question asks about substantive meaning. We are very unlikely to ever have a state that has no urban population. Therefore, it is not *substantively* meaningful to interpret the intercept coefficient on its own. 
+:::
+
+3.  Calculating the value for Texas and California:
+
+::: {.callout-tip title="HG comments"}
+1.5/2
+:::
+
+```{r}
+    States_data <- as.data.table(States_data)
+
+    data_cal <- States_data[stateid == as.character(unique(States_data$stateid)[5]),] 
+
+    #Extracting the data
+    Predicted_cal <- predict(states_linear_model, data = data_cal$urban)[6] #Predicting using lm model
+    Residual_cal = data_cal$permit - Predicted_cal
+
+    data_tx <- States_data[stateid == as.character(unique(States_data$stateid)[43]),] 
+
+    #Extracting the data
+    Predicted_tx <- predict(states_linear_model, data = data_tx$urban)[6] 
+
+    #Predicting using lm model
+    Residual_tx = data_tx$permit - Predicted_tx
+
+    sum(Residual_cal^2, Residual_tx^2)
+
+```
+
+::: {.callout-tip title="HG comments"}
+Your predicted values are incorrect. This means that your residuals are incorrect; however, you use the right process to calculate them. 
+
+```{r}
+#| message: false
+
+library(tidyverse)
+
+TX_CA_df <- poliscidata::states |> 
+  mutate(state = str_trim(state)) |> 
+  filter(state %in% c("California", "Texas")) |> 
+  column_to_rownames(var = "state") |> 
+  select(urban, permit)
+
+results <- broom::augment(states_linear_model, newdata = TX_CA_df)
+results
+```
+
+```{r}
+summarise(results, rss = sum(.resid^2))
+```
+:::
+
+4.  The Rsquared value is 0.27, this means that hardly 27% of the variance was explained by the model. Although this is acceptable in some cases, this would generally not be considered a good model.
+
+::: {.callout-tip title="HG comments"}
+2/2
+:::
+
+5.  In this case, the relationship is not causal. Although the correlation effects between the two variables are positive, this is not enough to prove causality. The lack of significant rsquare is a major problem, to prove causality we would expect the variance to be a little higher. Even then, statistical tests such as this are not enough to prove causality. It is best proven in an observational set up, where multiple draws of the data can be performed to prove the effect. In this particular case, we can understand that an urban population can imbibe values that increase support for abortion, but the urbanization of a state is not directly causing the increase in support for abortion.
+
+::: {.callout-tip title="HG comments"}
+2/2
+:::
+
+### Question 2
+
+*5 points*
+
+::: {.callout-tip title="HG comments"}
+3.5/5
+:::
+
+Use the `gss` data set (the unit of analysis is the individual survey respondent) and evaluate the hypothesis that Republicans had less confidence in the executive branch of the federal government than Democrats in 2016. Use the following variables: `partyid` is a 7-category ordinal indicator (0 = Strong Democrat; 1 = Weak Democrat; 2 = Independent Democrat; 3 = Independent; 4 = Independent Republican; 5 = Weak Republican; 6 = Strong Republican); and `confed` is a 3-category ordinal indicator (1 = "a great deal" of confidence; 2 = "only some;" 3 = "hardly any"). Do the data support the hypothesis and how do you know?
+
+Ans 2:
+
+```{r}
+#We can construct a cross tab to measure the effects of this variable 
+gss_data <- poliscidata::gss
+
+gss_data <- poliscidata::gss
+
+gss_data$partyid <- as.character(droplevels(gss_data$partyid))
+
+gss_data['partyid'][gss_data['partyid'] == 'StrDem'] <- '0'
+gss_data['partyid'][gss_data['partyid'] == 'WkDem'] <- '1'
+gss_data['partyid'][gss_data['partyid'] == 'IndDem'] <- '2'
+gss_data['partyid'][gss_data['partyid'] == 'Ind'] <- '3'
+gss_data['partyid'][gss_data['partyid'] == 'IndRep'] <- '4'
+gss_data['partyid'][gss_data['partyid'] == 'WkRep'] <- '5'
+gss_data['partyid'][gss_data['partyid'] == 'StrRep'] <- '6'
+
+gss_data$confed <- as.character(droplevels(gss_data$confed))
+
+gss_data['confed'][gss_data['confed'] == 'A GREAT DEAL'] <- '1'
+gss_data['confed'][gss_data['confed'] == 'ONLY SOME'] <- '2'
+gss_data['confed'][gss_data['confed'] == 'HARDLY ANY'] <- '3'
+
+
+datasummary_crosstab(confed ~ partyid, data = gss_data)
+
+```
+
+Based on the crosstab evaluation, we can see that the combination of 0,1 and 2 categories in having a great deal of confidence is 70% of the total number of rows. Republicans had about 44% of the rows where they had hardly any confidence in the government. Republicans having high confidence in the government is only 15% of the total number of rows as well.
+
+Based on these percentage values, we can say with confidence that democrats had a higher trust in the executive government compared to republicans in 2012.
+
+::: {.callout-tip title="HG comments"}
+Your set-up explores how party identification differs among people with different levels of confidence in the executive branch. The hypothesis posed in the question asks the opposite question: how does confidence in the executive branch differ by party identification. For example, you can compare the proportion of strong Democrats who have hardly any confidence (53 of 356, or 14.9%) to the proportion of strong Republicans who have hardly any confidence (79 of 192, or 41.1%). Are these very different from one another? 
+:::
+
+### Question 3
+
+*5 points*
+
+::: {.callout-tip title="HG comments"}
+5/5
+:::
+
+Use the `world` dataset and evaluate the distributions for each the following variables: `literacy` (a country's literacy rate) and `free_overall` (a country's degree of economic freedom). Be sure to visually display each distribution and thoroughly describe their key attributes. Next, evaluate the bivariate relationship between the two variables -- i.e., is economic freedom associated with literacy? If so, what is the nature of the relationship and how do you know? In doing so, be sure to use proper descriptive tools (and thus do not rely simply on a regression output).
+
+Ans 3:
+
+```{r}
+world_data <- poliscidata::world
+
+#Summary
+summary(poliscidata::world$literacy)
+```
+
+```{r}
+length(poliscidata::world$literacy)
+```
+
+Taking a look at the summary statistics, we can see that the data contains 10 NA values out of a total sample size of 167. It has a median percentage value of 88.7% with a max of 100% and a minimum of 21%. As this is a percentage scale, the data can range from 0 to 100. From this data alone we can see that the distribution skews to the right.
+
+::: {.callout-tip title="HG comments"}
+These data skew to the left. You look at the tail, not the hump. 
+:::
+
+Now let's see the distributions
+
+```{r}
+#Histogram chart 
+ggplot(data = poliscidata::world, aes(x=literacy)) + geom_histogram(na.rm = TRUE)
+```
+
+Plotting the data series and removing the NA values, we can see that our original hypothesis was correct with a majority of the data above the 80% mark.
+
+Taking a look at the density chart,
+
+```{r}
+ggplot(data = poliscidata::world, aes(x=literacy)) + 
+  geom_density(na.rm = TRUE) +
+  geom_vline(xintercept=mean(poliscidata::world$literacy, na.rm = TRUE)) + 
+  geom_vline(xintercept=median(poliscidata::world$literacy, na.rm = TRUE)) +
+  annotate(x = mean(poliscidata::world$literacy, na.rm = TRUE), y = +Inf, label = "Mean", vjust = 2, geom = "label") +
+  annotate(x = median(poliscidata::world$literacy, na.rm = TRUE), y = +Inf, label = "Median", vjust = 2, geom = "label")
+```
+
+Looking at the density chart we can clearly see the majority of the data skewing to the right and above 80%.
+
+```{r}
+boxplot(poliscidata::world$literacy, na.rm = TRUE)
+```
+
+Doing a quick outlier analysis as well, the data is definitely skewed, with the singular outlier lying below the series.
+
+Let's now explore the same for the free_overall variable
+
+```{r}
+#Summary
+summary(poliscidata::world$free_overall)
+```
+
+Taking a look at the summary statistics, we can see that the data contains 17 NA values out of a total sample size of 167. It has a median percentage value of 59.45% with a max of 86.10% and a minimum of 21.40%. As this data series is again a percentage distribution, the data can range from 0% to 100%. From this data alone we can see that the distribution is a lot more normal than the distribution for literacy.
+
+Let's see the distributions:
+
+```{r}
+#Histogram chart 
+ggplot(data = poliscidata::world, aes(x=free_overall)) + geom_histogram(na.rm = TRUE)
+```
+
+We can see that most of the data points are clearly clustered in the center of the distribution.
+
+Let's see a density plot
+
+```{r}
+ggplot(data = poliscidata::world, aes(x=free_overall)) + 
+  geom_density(na.rm = TRUE) +
+  geom_vline(xintercept=mean(poliscidata::world$free_overall, na.rm = TRUE)) + 
+  geom_vline(xintercept=median(poliscidata::world$free_overall, na.rm = TRUE)) +
+  annotate(x = mean(poliscidata::world$free_overall, na.rm = TRUE), y = +Inf, label = "Mean", vjust = 2, geom = "label") +
+  annotate(x = median(poliscidata::world$free_overall, na.rm = TRUE), y = +Inf, label = "Median", vjust = 2, geom = "label")
+```
+
+The mean and the median are very close to each other and almost touch the peak of the curve. The data is very evenly distributed in this scenario.
+
+```{r}
+boxplot(poliscidata::world$free_overall, na.rm = TRUE)
+```
+
+Compared to the literacy variable, the box plot looks at lot more centered. There are however two outliers in this case rather than the one before.
+
+Examining the relationship between the to variables we can plot the two variables and see the interacting trend between them to get a rough idea of the relationship.
+
+```{r}
+ggplot(data = world_data, aes(x=literacy, y=free_overall)) +
+  geom_point(size=2, na.rm = TRUE) +
+  geom_smooth(method=loess, se=FALSE, na.rm = TRUE, aes(colour="Non_linear_trend")) +
+  geom_smooth(method=lm, se=FALSE, na.rm = TRUE, aes(colour="Linear_trend")) 
+  
+```
+
+Based on the plot, there seems to be a rather weak positive relationship between the variables.
+
+Let's check the linear correlation level,
+
+```{r}
+#Extracting the columns needed dropping the NA values and checking the linear correlation
+world_literacy_free_data <- as.data.frame(cbind(world_data$literacy, world_data$free_overall))
+world_literacy_free_data <- na.omit(world_literacy_free_data)
+row.names(world_literacy_free_data) <- NULL
+
+cor(world_literacy_free_data)[1,2]
+  
+```
+
+As we can see there is a 0.43 level of correlation between the two variables. This is in the positive direction, but maybe not very strong.
+
+Let's now see if we can explain the variance of one variable with the another variable.
+
+First let's test if we can explain the variance of literacy based on overall freedom
+
+```{r}
+lm_obj_literacy_v_freedom <- lm(literacy ~ free_overall, data = world_data)
+modelsummary::modelsummary(lm_obj_literacy_v_freedom)
+```
+
+Based on the model summary, we can see that the free_overall variable is positive and statistically significant in explaining the variation of literacy. This might suggest that the more economically free a populace is, the more literate they can become. We can see both R squared and the Adj, R square to be reasonably low indicating that there are probably many more reasons affecting the variance of literacy.
+
+How about the other way around ,
+
+```{r}
+lm_obj_freedom_v_literacy <- lm(free_overall ~ literacy, data = world_data)
+modelsummary::modelsummary(lm_obj_freedom_v_literacy)
+```
+
+Based on the model summary, we can see that the literacy variable is positive and statistically significant in explaining the variation of economic freedom. This might suggest that the more literate a populace is, the more economically free they they can become. We can see both R squared and the Adj, R square to be reasonably low indicating that there are probably many more reasons affecting the variance.
+
+But based on all our experimentation, we can conclude that there is a weak but significant effect of the two variables on each other.
