@@ -1,11 +1,15 @@
 ---
 title: "Problem Set 4"
 subtitle: "Due date: 16 October"
-pdf:
+format: 
+  pdf:
     self-contained: true
+toc: true
 editor: visual
 execute: 
-  echo: true
+  echo: false
+  warning: false
+  message: false
 ---
 
 Please upload your completed assignment to the ELMs course site (under the assignments menu). Remember to include an annotated script file for all work with R and show your math for all other problems (if applicable, or necessary). Please also upload your completed assignment to the Github repository that you have shared with us. *We should be able to run your script with no errors.*
