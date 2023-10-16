@@ -180,7 +180,7 @@ Ans 5:
 B. The distribution is more skewed to the left
 
 ::: {.callout-tip title="HG comments"}
-The distribution of a variable that has a median that is smaller than its mean is a right-skewed distribution. 
+The distribution of a variable that has a median that is smaller than its mean is a right-skewed distribution.
 :::
 
 ### Question 6
@@ -223,7 +223,7 @@ Ans 7:
 We cannot estimate the median value , the median value shifts to the right
 
 ::: {.callout-tip title="HG comments"}
-Almost! The median could also remain the same. 
+Almost! The median could also remain the same.
 
 If two or more people in the group are 50 years old, the median will remain at 50. For example:
 
@@ -275,19 +275,19 @@ $$
 50 = \frac{\sum{x_i}}{10}
 $$
 
-We can calculate the sum of the ages of the original group: 
+We can calculate the sum of the ages of the original group:
 
 $$
 \sum{x_i} = 500
 $$
 
-From this sum of ages, we remove on 70 year old: 
+From this sum of ages, we remove on 70 year old:
 
 $$
 \sum{x_{i-1}} = 430
 $$
 
-And we can calculate the new average: 
+And we can calculate the new average:
 
 $$
 \frac{430}{9} = 47.78
@@ -321,7 +321,7 @@ max(sd_1, sd_2, sd_3, sd_4)
 The max value is option C
 
 ::: {.callout-tip title="HG comments"}
-That's the smallest SD: it has no variation. The largest spread sits with A. 
+That's the smallest SD: it has no variation. The largest spread sits with A.
 :::
 
 ### Question 10
@@ -364,7 +364,7 @@ Cross_tab_data
 Based on the above data, we can see that the higher the social trust, the less likely people would would vote. However I do not see the effect to be continuous, even on lower trust, there was significant voting.
 
 ::: {.callout-tip title="HG comments"}
-We should always look at proportions within categories when using a cross tab. This allows us to see how the distribution of our categorical variable changes as we move across our dependent variable. 
+We should always look at proportions within categories when using a cross tab. This allows us to see how the distribution of our categorical variable changes as we move across our dependent variable.
 
 ```{r}
 modelsummary::datasummary_crosstab(social_trust ~ voted08, data = tidyr::drop_na(poliscidata::gss, social_trust, voted08))
@@ -410,7 +410,7 @@ modelsummary::modelsummary(states_linear_model)
 ```
 
 ::: {.callout-tip title="HG comments"}
-Please make sure to always include meaningful variable labels in your professionally formatted tables. `urban` is not meaningful for your readers. 
+Please make sure to always include meaningful variable labels in your professionally formatted tables. `urban` is not meaningful for your readers.
 :::
 
 The variable 'urban' has a positive coefficient as well as being statistically significant. This means that the variable has a significant and positive effect on abortion attitudes. The Rsquared and the Adjusted Rsquared values are not very high however, this means that there is significant variance that is not being explained.
@@ -420,7 +420,7 @@ The variable 'urban' has a positive coefficient as well as being statistically s
 :::
 
 ::: {.callout-tip title="HG comments"}
-How much does the predicted value of `permit` increase with every one unit increase in the `urban` variable? 
+How much does the predicted value of `permit` increase with every one unit increase in the `urban` variable?
 :::
 
 2.  The intercept term is the predicted value of the dependent variable when all the independent terms are equal to zero. In this case it is 9.639, that means that when the urban value is zero, this will be the percentage that says that abortion should be allowed. Intercepts should generally be carefully evaluated in regression situations as they are just a mathematical optimization. In this case, it seems alright to interpret the variable, as it indicates the abortion acceptance rate in a completely rural state.
@@ -430,7 +430,7 @@ How much does the predicted value of `permit` increase with every one unit incre
 :::
 
 ::: {.callout-tip title="HG comments"}
-The question asks about substantive meaning. We are very unlikely to ever have a state that has no urban population. Therefore, it is not *substantively* meaningful to interpret the intercept coefficient on its own. 
+The question asks about substantive meaning. We are very unlikely to ever have a state that has no urban population. Therefore, it is not *substantively* meaningful to interpret the intercept coefficient on its own.
 :::
 
 3.  Calculating the value for Texas and California:
@@ -461,7 +461,7 @@ The question asks about substantive meaning. We are very unlikely to ever have a
 ```
 
 ::: {.callout-tip title="HG comments"}
-Your predicted values are incorrect. This means that your residuals are incorrect; however, you use the right process to calculate them. 
+Your predicted values are incorrect. This means that your residuals are incorrect; however, you use the right process to calculate them.
 
 ```{r}
 #| message: false
@@ -539,7 +539,7 @@ Based on the crosstab evaluation, we can see that the combination of 0,1 and 2 c
 Based on these percentage values, we can say with confidence that democrats had a higher trust in the executive government compared to republicans in 2012.
 
 ::: {.callout-tip title="HG comments"}
-Your set-up explores how party identification differs among people with different levels of confidence in the executive branch. The hypothesis posed in the question asks the opposite question: how does confidence in the executive branch differ by party identification. For example, you can compare the proportion of strong Democrats who have hardly any confidence (53 of 356, or 14.9%) to the proportion of strong Republicans who have hardly any confidence (79 of 192, or 41.1%). Are these very different from one another? 
+Your set-up explores how party identification differs among people with different levels of confidence in the executive branch. The hypothesis posed in the question asks the opposite question: how does confidence in the executive branch differ by party identification. For example, you can compare the proportion of strong Democrats who have hardly any confidence (53 of 356, or 14.9%) to the proportion of strong Republicans who have hardly any confidence (79 of 192, or 41.1%). Are these very different from one another?
 :::
 
 ### Question 3
@@ -568,7 +568,7 @@ length(poliscidata::world$literacy)
 Taking a look at the summary statistics, we can see that the data contains 10 NA values out of a total sample size of 167. It has a median percentage value of 88.7% with a max of 100% and a minimum of 21%. As this is a percentage scale, the data can range from 0 to 100. From this data alone we can see that the distribution skews to the right.
 
 ::: {.callout-tip title="HG comments"}
-These data skew to the left. You look at the tail, not the hump. 
+These data skew to the left. You look at the tail, not the hump.
 :::
 
 Now let's see the distributions
