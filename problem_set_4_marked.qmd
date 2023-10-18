@@ -1,0 +1,151 @@
+---
+title: "Problem Set 4"
+subtitle: "Due date: 16 October"
+format: 
+  html:
+    self-contained: true
+toc: true
+editor: visual
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+Please upload your completed assignment to the ELMs course site (under the assignments menu). Remember to include an annotated script file for all work with R and show your math for all other problems (if applicable, or necessary). Please also upload your completed assignment to the Github repository that you have shared with us. *We should be able to run your script with no errors.*
+
+**Total points: 30**
+
+## Question 1
+
+*Points: 5*
+
+::: {.callout-tip title="HG comments"}
+5/5
+:::
+
+Suppose I am playing poker with a regular deck of 52 cards. I have three cards in my hand, one of which is a king. What is the probability that the next two cards I draw will both be kings?
+
+Ans 1:
+
+Probability that the next two cards are kings
+
+Probability that the next card drawn is a king = 3/49
+
+Probability that the card after that is also a king = 2/48.
+
+Hence the joint probability is 3/49 \* 2/48 = 0.002 or 0.2% chance
+
+## Question 2
+
+*Points: 5*
+
+::: {.callout-tip title="HG comments"}
+5/5
+:::
+
+A survey of 1,500 randomly selected individuals reveals that 46% of them have a college degree and that 31% of them have a gun in their house. If you were to assume that college graduation and gun ownership are independent of one another, what is the probability that an individual is both a college graduate and does not have a gun in his or her house?
+
+Ans:2
+
+College Degree = 1,500 \*46/100 = 690 individuals
+
+Has a gun = 1,500 \* 31/100 = 465 individuals
+
+Probability that I have a college degree and do not have a gun will be:
+
+P(Has college Degree) \* P(Does not have a gun)
+
+= 46/100 \* 69/100
+
+= 0.3174 or 31.74% given that they are independent.
+
+## Question 3
+
+*Points: 5*
+
+::: {.callout-tip title="HG comments"}
+5/5
+:::
+
+I roll a fair six-sided dice and I get a number greater than three. What is the probability that the next two dice rolls will also generate numbers greater than three?
+
+Ans 3:
+
+Each roll will have a 0.5 chance of becoming greater than three, or the first roll will be greater than three and the second will be greater than three.
+
+Hence total probability for two rolls will be 0.5\*0.5 = 0.25 or 25% chance
+
+## Question 4
+
+*Points: 10*
+
+::: {.callout-tip title="HG comments"}
+10/10
+:::
+
+Assume that in the United States, 15% of people are smokers and, of smokers, 60% smoke at least one pack a day. Among those who smoke at least a pack a day, 60% will develop lung cancer at some point in their lives while, in the rest of the population (which includes smokers who smoke less than a pack a day and non-smokers), only 10% will. What is the probability that a person who develops lung cancer was a smoker who smoked at least a pack a day?
+
+Ans 4:
+
+Defining some things:
+
+A = Person that smokes more than one pack a day
+
+B = Person has cancer
+
+Hence we need to find P(A\|B) or the probability of smoking a pack a day given that the person has developed cancer.
+
+We can define
+
+P(A) = 0.15 \* 0.6 = 0.09 \[Probability of a smoker and smoking more than a pack\]
+
+P(B\|Ac) = 0.1 \[Total Probability of getting cancer when the person is not a smoker nor a heavy smoker\]
+
+P(B\|A) = 0.6 \[Probability that you get cancer if you are a heavy smoker\]
+
+P(Ac) = Probability the person is not a heavy smoker
+
+= Probability the person is not a smoker or the person smokes less than a pack a day.
+
+= (0.15 \*0.4) + 0.85
+
+= 0.91
+
+We need to find P(A\|B);
+
+P(A\|B) = P(B\|A) \* P(A)/ P(B) \[Bayes theorm\]
+
+= P(B\|A) \* P(A)/ (P(B\|A) \* P(A) + P(B\|Ac) \* P(Ac)) \[Law of multiplication\]
+
+= 0.6 \* 0.09 / 0.6 \* 0.09 + 0.1 \* 0.91
+
+= 0.054/0.145
+
+= 0.372
+
+Or there is a 37.2% chance that a person who develops lung cancer was a smoker who smoked more than one pack.
+
+## Question 5
+
+*Points: 5*
+
+::: {.callout-tip title="HG comments"}
+5/5
+:::
+
+Assume that in the world, 60% of countries are democracies and 80% of countries have ratified the Rome Statute for the International Criminal Court. Assume further that 90% of democracies have ratified the Rome Accords. What is the probability that a country is either a democracy or has ratified the Rome Accords?
+
+Ans 5:
+
+P(D) -\> 0.60
+
+P(RS) -\> 0.80
+
+P(D (∩) RS)/P(D) = 0.9
+
+=\> Probability that it is either a democracy or has ratified the accords = P(D) + P(RS) - P(D (∩) RS)
+
+= 0.6 + 0.8 - (0.9\*0.6)
+
+= 0.86 or 86% chance that a country is a democracy or has ratified the Rome accords.
