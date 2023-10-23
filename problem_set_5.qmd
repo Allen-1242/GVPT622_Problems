@@ -2,7 +2,7 @@
 title: "Problem Set 5"
 subtitle: "Due date: 23 October"
 format: 
-  html:
+  pdf:
     self-contained: true
 editor: visual
 execute: 
