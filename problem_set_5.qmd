@@ -212,7 +212,7 @@ Or 1.64/1.96 \* 4.5 = ME_90
 
 Or ME_90 = 3.76
 
-Hence the margin of error will be 3.79 at 90% confid
+Hence the margin of error will be 3.79 at 90% confidence
 
 ## Question 4
 
@@ -274,7 +274,7 @@ $$
 
 Or approx 0.5
 
-The probability if the Z score is 0.5 is 1-0.69 = 0.37. Which is a reasonably higher but still quite small.
+The probability if the Z score is 0.5 is 1-0.69 = 0.37. Which is a reasonably higher than before but still quite small.
 
 ## Question 5
 
