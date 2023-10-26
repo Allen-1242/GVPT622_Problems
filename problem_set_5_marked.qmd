@@ -21,7 +21,7 @@ library(tibble)
 
 *Total points: 6*
 
-::: {.callout-tip}
+::: callout-tip
 4/6
 :::
 
@@ -43,7 +43,7 @@ tibble::tibble(
 
 *Points: 2*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -63,7 +63,7 @@ Which is about 38% chance of being 25-30 or a non-voter
 
 *Points: 4*
 
-::: {.callout-tip}
+::: callout-tip
 2/4
 :::
 
@@ -99,7 +99,7 @@ $$
 
 Hence the interval will be \[0.085, 0.055\]
 
-::: {.callout-tip}
+::: callout-tip
 Correct! But the question also asks for the CI around 25-to-30-year-olds.
 :::
 
@@ -107,7 +107,7 @@ Correct! But the question also asks for the CI around 25-to-30-year-olds.
 
 *Total points:* *7*
 
-::: {.callout-tip}
+::: callout-tip
 7/7
 :::
 
@@ -117,7 +117,7 @@ Assume that the standard deviation for the population distribution of a state in
 
 *Points: 3*
 
-::: {.callout-tip}
+::: callout-tip
 3/3
 :::
 
@@ -150,7 +150,7 @@ As the sample size increases, we can see the error going down significantly
 
 *Points: 1*
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -160,7 +160,7 @@ Ans 2B:
 
 As defined above , we can see that the sample error goes down the more the sample size increases, but we do hit a point of diminishing returns.
 
-If we take 
+If we take
 
 $$
 SE1  =  \sigma/\sqrt{n}
@@ -202,7 +202,7 @@ Standard literature says 40. I am assuming that the expenses are telephone calls
 
 *Points: 3*
 
-::: {.callout-tip}
+::: callout-tip
 3/3
 :::
 
@@ -232,7 +232,7 @@ grid()
 
 *Points: 4*
 
-::: {.callout-tip}
+::: callout-tip
 4/4
 :::
 
@@ -260,7 +260,7 @@ Hence the margin of error will be 3.79 at 90% confidence
 
 *Points: 4*
 
-::: {.callout-tip}
+::: callout-tip
 4/4
 :::
 
@@ -326,7 +326,7 @@ The probability if the Z score is 0.5 is 1-0.69 = 0.37. Which is a reasonably hi
 
 *Points: 4*
 
-::: {.callout-tip}
+::: callout-tip
 2/4
 :::
 
@@ -340,8 +340,8 @@ $$
 Confidence  =  p+/- z*\sqrt{p * (1-p)/ n}
 $$
 
-:::{,callout-tip}
-The standard deviation of a binomial distribution: 
+::: {,callout-tip}
+The standard deviation of a binomial distribution:
 
 $$
 \sigma_X = \sqrt{np(1-p)}
@@ -380,9 +380,8 @@ Or a range of \[0.495, 0.504\]
 
 Hence we can see that there is a diminishing return in the data that we get if the sample size is increased.
 
-
-::: {.callout-tip}
-Almost! The question asks for the confidence interval for the range of the *count* of heads. So, your center point should the number of heads you flipped in these trials. If you have a 50% chance of getting heads when you flip a fair coin, your expected number of heads should be 250, 2,500, and 25,000 heads from each trial. You calculate your confidence around this result. 
+::: callout-tip
+Almost! The question asks for the confidence interval for the range of the *count* of heads. So, your center point should the number of heads you flipped in these trials. If you have a 50% chance of getting heads when you flip a fair coin, your expected number of heads should be 250, 2,500, and 25,000 heads from each trial. You calculate your confidence around this result.
 
 ```{r}
 p_head <- 0.5
