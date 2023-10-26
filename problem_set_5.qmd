@@ -47,7 +47,7 @@ Probability will be P(25-30) + P(Non-Voter) - P(Non-Voter and 25-30)
 
 Which is about 38% chance of being 25-30 or a non-voter
 
-###  Part B
+### Part B
 
 *Points: 4*
 
