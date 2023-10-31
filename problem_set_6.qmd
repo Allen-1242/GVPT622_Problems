@@ -2,9 +2,8 @@
 title: "Problem Set 6"
 subtitle: "Due date: 30 October"
 format: 
-  html:
+  pdf:
     self-contained: true
-toc: true
 editor: visual
 execute: 
   echo: true
@@ -24,21 +23,111 @@ I hypothesize that the mean mathematics SAT score for University of Maryland stu
 
 Based on my sample, what is a point estimate for the mean mathematics SAT score for University of Maryland students?
 
+Ans 1A.
+
+The point estimate is the best measure of the sample of the mean that is in this case 610 itself.
+
 ### Part B
 
 What is a 95% confidence interval around that estimate?
+
+Ans1B:
+
+We know that,
+
+$$
+Confidence  =  \overline{x} +/- t(SD/\sqrt(n))
+$$
+
+In this case,
+
+$$
+\overline{x} = 610
+$$
+
+$$
+SD = 75
+$$
+
+$$
+n = 625
+$$
+
+t for (625 - 1) degrees of freedom at a 95% confidence interval is approx 1.965
+
+Hence confidence interval would be:
+
+$$
+Confidence  =  610 +/- 1.965(75/\sqrt(625))
+$$
+
+$$
+Confidence  =  610 +/- 5.895
+$$
+
+Which means the confidence interval ranges from \[604.105, 615.895\]
 
 ### Part C
 
 What is the null hypothesis?
 
+Ans 1C:
+
+The null hypothesis, is a statement that there is no significant effect in a statistical hypothesis test. It serves as the default assumption to be tested. In your case, whether the mean mathematics SAT score for University of Maryland students is different from 600, the null hypothesis would be:
+
+:The mean mathematics SAT score for University of Maryland students is equal to 600.
+
+In other words, the null hypothesis assumes that there is no difference between the population mean SAT score and the hypothesized value of 600. Our goal is to evaluate whether there is enough evidence to reject this null hypothesis in favor of an alternative hypothesis that suggests a difference.
+
 ### Part D
 
 What is the two-tailed p-value and what does it mean?
 
+Ans 1D:
+
+We need to calculate the given Z score first in order to perform the two tailed test.
+
+We know that ,
+
+$$
+Z  =  \overline{x} - \mu/\\sigma/\sqrt{n}
+$$
+
+Plugging in the values we get ,
+
+$$
+Z  =  610 - 600/75/\sqrt{625}
+$$
+
+Which is about 10/3 or 3.33.
+
+Hence for the two tailed test, we want to see the probability of getting a score that is greater than 3.33 or less than 3.33.
+
+The p values corresponding to the given Z score is around 0.001 hence it is very small and the result is statistically significant.
+
+What it means:
+
+-   A small p-value (typically less than your chosen significance level, in this case, 0.05) suggests strong evidence against the null hypothesis.
+
+-   In the context of this problem, a p-value of 0.001 is much smaller than 0.05, so you would reject the null hypothesis.
+
+-   This means that based on your sample data, you have strong evidence to conclude that the mean mathematics SAT score for University of Maryland students is different from 600.
+
+In summary, a two-tailed p-value measures the strength of evidence against the null hypothesis. A very small p-value indicates strong evidence against the null hypothesis, while a larger p-value suggests weaker evidence against the null hypothesis.
+
 ### Part E
 
 Do the data support my hypothesis? Why, or why not?
+
+Ans 1E:
+
+The initial hypothesis was that the mean math SAT score was not equal to 600.
+
+After conducting a hypothesis test, we have found that the two-tailed p-value was very small, approximately 0.001. This means that there is strong evidence against the null hypothesis that the mean SAT score is equal to 600. As a result, you can reject the null hypothesis.
+
+In practical terms, this suggests that the sample mean SAT score of 610 that we have obtained from the 625 students is significantly different from the hypothesized population mean of 600. The data indicate that, based on our sample, the mean SAT score for University of Maryland students is not 600, but rather 610.
+
+So, in conclusion, the data from our sample do support your hypothesis, and we have strong statistical evidence to suggest that the mean mathematics SAT score for University of Maryland students is different from 600.
 
 ## Question 2
 
@@ -50,19 +139,99 @@ I take an SRS of 900 citizens in a public opinion survey and find that the mean 
 
 What is the null hypothesis?
 
+Ans 2A:
+
+The null hypothesis : There is no significant difference or effect, or that feelings toward President Biden are not greater than 50.
+
+SD = 25
+
+Mean SRS = 51.5
+
+In mathematical terms, you can represent this null hypothesis as:
+
+H0: μ≤ 50 H0​:μ≤50
+
+Where:
+
+-   H0 is the null hypothesis.
+
+-   μ is the population mean feeling thermometer rating for President Biden.
+
+-   50 is the hypothesized value (in this case, equal to or less than 50).
+
+So, the null hypothesis is that there is no significant evidence to suggest that feelings toward President Biden are greater than 50.
+
 ### Part B
 
 What is a 95% confidence interval around the sample statistic? Does this interval indicate support for a two-tailed test of my hypothesis (`p < 0.05` as the threshold)? Why, or why not?
 
+Ans 2B:
+
+We know that the CI $$
+Confidence  =  \overline{x} +/- t(SD/\sqrt(n))
+$$
+
+The t value at (900 -1) and 95% confidence is around 1.645.
+
+Plugging in the rest of the values,
+
+$$
+Confidence  =  51.5 +/- 1.645(25\sqrt(900))
+$$
+
+Hence the final confidence will be:
+
+$$
+Confidence  =  51.5 +/- 1.37
+$$
+
+Hence the confidence at 95% will be around \[50.086, 52.914\]
+
+So, the 95% confidence interval for the mean feeling thermometer rating of President Biden is approximately (50.086, 52.914). This interval represents a range of values that we are 95% confident contains the true population mean.
+
+For the p_value question,
+
+The confidence interval does not directly indicate support for a two-tailed test with a significance level of p_value \< 0.05 because it represents a range of values around the sample mean (51.5) and is used for estimating the population mean. It is not the same as conducting a hypothesis test.
+
+If we want to perform a two-tailed test with a significance level of p_value \< 0.05 , we would need to recalculate the test with a null hypothesis that the mean feeling thermometer rating is equal to 50, and then compare the test statistic to the appropriate critical value(s) for a two-tailed test at the desired significance level. The confidence interval alone does not determine the outcome of the hypothesis test.
+
 ### Part C
 
 What is a 90% confidence interval around the sample statistic? Does this interval indicate support for a one-tailed test of my hypothesis (`p < 0.05` as the threshold)? Why, or why not?
+
+Ans 2C:
+
+For a 90% interval, we can use the same formula:
+
+$$
+Confidence  =  \overline{x} +/- t(SD/\sqrt(n))
+$$
+
+The t value at (900-1) and a 90% confidence interval will be approx 1.645
 
 ## Question 3
 
 *Points: 5*
 
 Suppose I conduct a difference of means test and obtain a t-statistic of 2.50. What does this indicate about the statistical significance of the sample mean compared to the null hypothesis?
+
+Ans3:
+
+A t-statistic of 2.50 indicates the difference between the sample mean and the null hypothesis mean in terms of the number of standard errors. The t-statistic is used to assess the statistical significance of the difference between the sample mean and the null hypothesis mean.
+
+In the context of a t-test, if our t-statistic is 2.50, it means that the sample mean is 2.50 standard errors away from the null hypothesis mean. This difference is calculated using the formula for the t-statistic:
+
+We can write the t score as,
+
+$$
+t  =  \overline{x} - \mu/\\sigma/\sqrt{n}
+$$
+
+The t-statistic quantifies how many standard errors the sample mean is away from the null hypothesis mean. In our case, a t-statistic of 2.50 suggests that the sample mean is 2.50 standard errors greater than what you would expect based on the null hypothesis.
+
+To assess the statistical significance of this difference, we would compare the t-statistic to a critical value from the t-distribution for a given significance level and degrees of freedom. If the t-statistic is larger (in absolute value) than the critical value, it suggests that the observed difference is statistically significant, and you would likely reject the null hypothesis.
+
+The specific critical value depends on the chosen significance level and degrees of freedom, and it's used to determine whether the observed difference is unlikely to occur by random chance. If the t-statistic is greater than the critical value, it indicates that the sample mean is significantly different from the null hypothesis mean. If it's smaller, it suggests that the difference is not statistically significant, and we would fail to reject the null hypothesis.
 
 ## Question 4
 
@@ -74,21 +243,99 @@ I hypothesize that fewer than 40% of registered voters approve of President Bide
 
 Based on my sample, what is a point estimate for the proportion of the population that approves of President Biden?
 
+Ans 4A:
+
+N = 720.
+
+Point estimate of a sample is 37.9 itself.
+
 ### Part B
 
 What is a 90% confidence interval around that estimate?
+
+Ans 4B:
+
+We can use the formula:
+
+$$
+Confidence  =  p+/- z*\sqrt{p * (1-p)/ n}
+$$
+
+The Z score for a 90% confidence interval is 1.645 approx
+
+Plugging in the values , we can say that:
+
+$$
+Confidence  =  0.379+/- 1.645*\sqrt{0.379 * (1-0.379)/ 720}
+$$
+
+Which means confidence is around Confidence Interval = 0.379±0.0429
+
+Totally, CI = \[0.3361, 0.4219\]
 
 ### Part C
 
 What is the null hypothesis?
 
+Ans 5C:
+
+The Null hypothesis is that the proportion of registered voters who approve of President Biden is equal to 40% (p = 0.40).
+
 ### Part D
 
 What is the one-tailed p-value and what does it mean?
 
+Ans 4D,
+
+The test statistic (z) for a one-sample proportion test can be calculated as follows:
+
+$$
+Confidence  =  p+/- z*\sqrt{p * (1-p)/ n}
+$$
+
+Where:
+
+-   p is the sample proportion.
+
+-   pp is the hypothesized population proportion.
+
+-   nn is the sample size.
+
+In our case,
+
+-   p​ (sample proportion) = 0.379
+
+-   pp (hypothesized population proportion) = 0.40
+
+-   nn (sample size) = 720
+
+Now, plug these values into the formula:
+
+z is approx: 0.371
+
+For a one-tailed test, where you're testing whether the proportion is less than 40%, you need to find the area to the left of this test statistic on the standard normal distribution. Using a standard normal distribution table or calculator, you can find the one-tailed p-value.
+
+The one-tailed p-value for a z-value of -1.03 is approximately 0.150. This p-value suggests that if the true proportion of registered voters who approve of President Biden is 40% (according to the null hypothesis), you would expect to obtain a sample proportion as extreme as 37.9% or less about 15% of the time by random chance alone. Since this p-value is greater than the typical significance level of 0.05 (5%), you would fail to reject the null hypothesis.
+
+Now, you can find the one-tailed p-value using the standard normal distribution. Since you're testing whether the proportion is less than 40% (p \< 0.40), you need to find the area to the left of this test statistic (z) value.
+
+Using a standard normal distribution table or calculator, you can find that the one-tailed p-value for your test statistic (z) is approximately 0.1757.
+
+This means that if the true proportion of registered voters who approve of President Biden is 40% (according to the null hypothesis), you would expect to obtain a sample proportion as extreme as 37.9% or less about 17.57% of the time by random chance alone. Since this p-value is greater than the typical significance level of 0.05 (5%), you would fail to reject the null hypothesis. In other words, your sample data does not provide enough evidence to conclude that the proportion of voters who approve of President Biden is less than 40%.
+
 ### Part E
 
 Do the data support my hypothesis? Why, or why not?
+
+Ans5E:
+
+Based on the information provided and the results of your hypothesis test, the data do not strongly support our hypothesis. Our hypothesis was that fewer than 40% of registered voters approve of President Biden, but the one-tailed p-value, which measures the evidence against the null hypothesis, is approximately 0.150. This p-value is greater than the typical significance level of 0.05 (5%).
+
+In hypothesis testing, a p-value greater than the chosen significance level suggests that the observed sample data is not strong enough to reject the null hypothesis. In your case, this means that the data do not provide enough evidence to conclude that the proportion of registered voters who approve of President Biden is less than 40%.
+
+It's important to note that while the data do not support your hypothesis, this does not necessarily mean that the null hypothesis is true (i.e., it doesn't confirm that exactly 40% of registered voters approve of President Biden). It simply means that, based on your sample data, there is not enough evidence to conclude that the proportion is less than 40%.
+
+Hypothesis tests provide a measure of the strength of evidence against the null hypothesis, and in this case, the evidence is not strong enough to reject it.
 
 ## Question 5
 
@@ -96,6 +343,47 @@ Do the data support my hypothesis? Why, or why not?
 
 I hypothesize that in countries where Islam is the predominate religious group, women have a greater number of children on average (i.e., the total fertility rate is higher). Use the `world` dataset to test my hypothesis. State the null hypothesis and interpret what the results tell us about the null and alternative hypotheses. Be sure to show all work necessary to find the answer (i.e., you may use R to assist you, but you should show the necessary computations by hand).
 
-::: {.callout-note}
-The `world` data set can be found in `poliscidata::world`. 
+::: callout-note
+The `world` data set can be found in `poliscidata::world`.
 :::
+
+Ans 5:
+
+```{r}
+world_data <- poliscidata::world
+head(world_data)
+```
+
+Hypothesis: Our hypothesis is that countries that have Islam as the predominant religion , the average fertility rate is higher.
+
+Null hypothesis: The total fertility rate is the same in countries where Islam is the predominant religious group as in countries where Islam is not the predominant religious group.
+
+Splitting the data and extracting what we need:
+
+```{r}
+library(tidyr)
+
+#Cleaning data
+cleaned_data <- cbind(as.numeric(world_data$fertility), as.character(world_data$muslim))
+
+cleaned_data<- drop_na(as.data.frame(cleaned_data))
+colnames(cleaned_data) <- c('Fertility_Rate', 'Is_Muslim')
+cleaned_data$Fertility_Rate <- as.numeric(cleaned_data$Fertility_Rate)
+
+#Splitting data
+Countries_Islam <- cleaned_data[cleaned_data$Is_Muslim == 'Yes', ]
+Countries_NonIslam <- cleaned_data[cleaned_data$Is_Muslim == 'No', ]
+
+Mean_Islam = mean(Countries_Islam$Fertility_Rate)
+Mean_NonIslam = mean(Countries_NonIslam$Fertility_Rate)
+
+Mean_fertility_rate <- mean(cleaned_data$Fertility_Rate)
+
+#Performing a t test 
+result <- t.test(Countries_Islam$Fertility_Rate, Countries_NonIslam$Fertility_Rate)
+result
+```
+
+Note that I am using the Welchs t test as compared to Students , as Welch assumes that the variance between the two samples is different
+
+As we can see from the results, the null hypothesis is rejected at a 95% confidence interval. Hence we reject the null hypothesis and assume that Our hypothesis that countries that have Islam as the predominant religion , the average fertility rate is higher is correct.
