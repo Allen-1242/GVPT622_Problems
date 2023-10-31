@@ -290,7 +290,7 @@ Ans 4D,
 The test statistic (z) for a one-sample proportion test can be calculated as follows:
 
 $$
-Confidence  =  p+/- z*\sqrt{p * (1-p)/ n}
+z  =  \hat p - p/\sqrt(p(p-1))/n
 $$
 
 Where:
@@ -315,11 +315,11 @@ z is approx: 0.371
 
 For a one-tailed test, where you're testing whether the proportion is less than 40%, you need to find the area to the left of this test statistic on the standard normal distribution. Using a standard normal distribution table or calculator, you can find the one-tailed p-value.
 
-The one-tailed p-value for a z-value of -1.03 is approximately 0.150. This p-value suggests that if the true proportion of registered voters who approve of President Biden is 40% (according to the null hypothesis), you would expect to obtain a sample proportion as extreme as 37.9% or less about 15% of the time by random chance alone. Since this p-value is greater than the typical significance level of 0.05 (5%), you would fail to reject the null hypothesis.
+The one-tailed p-value for a z-value of 0.371 is approximately 0.150. This p-value suggests that if the true proportion of registered voters who approve of President Biden is 40% (according to the null hypothesis), you would expect to obtain a sample proportion as extreme as 37.9% or less about 15% of the time by random chance alone. Since this p-value is greater than the typical significance level of 0.05 (5%), you would fail to reject the null hypothesis.
 
 Now, you can find the one-tailed p-value using the standard normal distribution. Since you're testing whether the proportion is less than 40% (p \< 0.40), you need to find the area to the left of this test statistic (z) value.
 
-Using a standard normal distribution table or calculator, you can find that the one-tailed p-value for your test statistic (z) is approximately 0.1757.
+Using a standard normal distribution table or calculator, we can find that the one-tailed p-value for your test statistic (z) is approximately 0.1757.
 
 This means that if the true proportion of registered voters who approve of President Biden is 40% (according to the null hypothesis), you would expect to obtain a sample proportion as extreme as 37.9% or less about 17.57% of the time by random chance alone. Since this p-value is greater than the typical significance level of 0.05 (5%), you would fail to reject the null hypothesis. In other words, your sample data does not provide enough evidence to conclude that the proportion of voters who approve of President Biden is less than 40%.
 
@@ -382,8 +382,51 @@ Mean_fertility_rate <- mean(cleaned_data$Fertility_Rate)
 #Performing a t test 
 result <- t.test(Countries_Islam$Fertility_Rate, Countries_NonIslam$Fertility_Rate)
 result
+
+result$statistic
 ```
 
 Note that I am using the Welchs t test as compared to Students , as Welch assumes that the variance between the two samples is different
 
 As we can see from the results, the null hypothesis is rejected at a 95% confidence interval. Hence we reject the null hypothesis and assume that Our hypothesis that countries that have Islam as the predominant religion , the average fertility rate is higher is correct.
+
+Hand calculating it,
+
+We have,
+
+The mean of Islamic country fertility = 3.408444 (x1)
+
+The mean of NonIslamic country fertility = 2.519917 (x2)
+
+Variance of Islamic country = 2.322527 (s1)
+
+Variance of Non-Islamic country = 1.819441 (s2)
+
+n_Islamic = 45 (n1)\
+n_NonIslamic = 120 (n2)
+
+Test statistic:
+
+$$
+t = (\overline(x1) - \overline(x2) / \sqrt(s1^2/n1+ s2^2/n2)
+$$
+
+Plugging in values,
+
+$$
+t = (3.4 - 2.51 / \sqrt(2.32/45+ 1.81/120)
+$$
+
+Or ,
+
+$$
+t = 0.89 / \sqrt(0.049+ 0.015)
+$$
+
+$$
+t = 0.89 / 0.25
+$$
+
+Which means t is approx 3.56
+
+I am going to assume the difference is due to decimal significance.
