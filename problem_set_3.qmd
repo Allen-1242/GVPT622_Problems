@@ -77,7 +77,7 @@ We assume that the groups containing only network watchers will show a significa
 [Shortcomings of the experiment:]{.underline}
 
 1.  We are not controlling for any other variables, other variables that affect trust in government such as political leaning, income level, educational levels, criminal background etc. will all have effects in how the government is perceived.
-2.   We should replicate this study many times in order to understand how strong the relationships are
+2.  We should replicate this study many times in order to understand how strong the relationships are
 3.  Online forms will usually skew the sample to the younger participants.
 4.  Splitting the population into only two parts young and mature might hide a lot of variability in the mature population group. It can be split even further.
 5.  We don't really define what 'trust' means in the government as the citizens might trust their government in some areas but not in others. The questions needs to be defined very exactly.
@@ -105,13 +105,25 @@ B. 1. Sampling Variability: The sample is not large enough to hold for the rest 
 
 2.  Source of Bias: The countries data will be skewed depending on the 5 countries picked. 10 years is also not a large enough time compared to most countries existence, as most countries are older than this.
 
-C.
+```{=html}
+<!-- -->
+```
+C.  
 
+```{=html}
+<!-- -->
+```
 1.  Sampling Variability: The sample only takes for two countries. Educational administrators may be a good source if it is across many countries.
 2.  Source of Bias: The sample size is too small. Also there is no definition of the country being a democracy or not, this skews results.The time period is also not large enough to ensure there is no bias.
 
-D.
+```{=html}
+<!-- -->
+```
+D.  
 
+```{=html}
+<!-- -->
+```
 1.  Sampling Variability: it has a good number of countries, but it has not taken into account if the country is a democracy or not.
 2.  Source of bias: There have been more than 2/3rds countries as democracies compared to non-democracies in the last 25 years. Pure randomization might not yield good results when one of the classes is so small.
 

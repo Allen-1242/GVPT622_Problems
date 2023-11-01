@@ -17,7 +17,7 @@ Please upload your completed assignment to the ELMs course site (under the assig
 
 *Points: 10*
 
-::: {.callout-tip}
+::: callout-tip
 10/10
 :::
 
@@ -25,7 +25,7 @@ I hypothesize that the mean mathematics SAT score for University of Maryland stu
 
 ### Part A
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -37,7 +37,7 @@ The point estimate is the best measure of the sample of the mean that is in this
 
 ### Part B
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -81,7 +81,7 @@ Which means the confidence interval ranges from \[604.105, 615.895\]
 
 ### Part C
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -97,7 +97,7 @@ In other words, the null hypothesis assumes that there is no difference between 
 
 ### Part D
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -107,7 +107,7 @@ Ans 1D:
 
 We need to calculate the given Z score first in order to perform the two tailed test.
 
-::: {.callout-tip}
+::: callout-tip
 This is the t-statistic, not the z-score. But you're right to calculate the t-statistic.
 :::
 
@@ -127,8 +127,8 @@ Which is about 10/3 or 3.33.
 
 Hence for the two tailed test, we want to see the probability of getting a score that is greater than 3.33 or less than 3.33.
 
-::: {.callout-tip}
-No quite right. This is a translation/standardization of our sample mean into its corresponding t-statistic. We want to see whether this sits within or outside of the t-statistics representing our statistical threshold (p-values).  
+::: callout-tip
+No quite right. This is a translation/standardization of our sample mean into its corresponding t-statistic. We want to see whether this sits within or outside of the t-statistics representing our statistical threshold (p-values).
 :::
 
 The p values corresponding to the given Z score is around 0.001 hence it is very small and the result is statistically significant.
@@ -145,7 +145,7 @@ In summary, a two-tailed p-value measures the strength of evidence against the n
 
 ### Part E
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -165,7 +165,7 @@ So, in conclusion, the data from our sample do support your hypothesis, and we h
 
 *Points: 10*
 
-::: {.callout-tip}
+::: callout-tip
 5/10
 :::
 
@@ -173,7 +173,7 @@ I take an SRS of 900 citizens in a public opinion survey and find that the mean 
 
 ### Part A
 
-::: {.callout-tip}
+::: callout-tip
 1/2
 :::
 
@@ -183,7 +183,7 @@ Ans 2A:
 
 The null hypothesis : There is no significant difference or effect, or that feelings toward President Biden are not greater than 50.
 
-::: {.callout-tip}
+::: callout-tip
 The null hypothesis must describe a single point against which you can test. Here: the null hypothesis is that the mean feeling thermometer rating for President Biden is equal to 50.
 :::
 
@@ -207,7 +207,7 @@ So, the null hypothesis is that there is no significant evidence to suggest that
 
 ### Part B
 
-::: {.callout-tip}
+::: callout-tip
 3/4
 :::
 
@@ -215,7 +215,7 @@ What is a 95% confidence interval around the sample statistic? Does this interva
 
 Ans 2B:
 
-We know that the CI 
+We know that the CI
 
 $$
 Confidence  =  \overline{x} +/- t(SD/\sqrt(n))
@@ -223,9 +223,8 @@ $$
 
 The t value at (900 -1) and 95% confidence is around 1.645.
 
-::: {.callout-tip}
-
-The t-statistic at a two-tailed 95% confidence level is: 
+::: callout-tip
+The t-statistic at a two-tailed 95% confidence level is:
 
 ```{r}
 qt(0.025, 899, lower.tail = F)
@@ -254,19 +253,19 @@ For the p_value question,
 
 The confidence interval does not directly indicate support for a two-tailed test with a significance level of p_value \< 0.05 because it represents a range of values around the sample mean (51.5) and is used for estimating the population mean. It is not the same as conducting a hypothesis test.
 
-::: {.callout-tip}
+::: callout-tip
 Correct!
 :::
 
 If we want to perform a two-tailed test with a significance level of p_value \< 0.05 , we would need to recalculate the test with a null hypothesis that the mean feeling thermometer rating is equal to 50, and then compare the test statistic to the appropriate critical value(s) for a two-tailed test at the desired significance level. The confidence interval alone does not determine the outcome of the hypothesis test.
 
-::: {.callout-tip}
-Check out the `infer` package for this. Very cool. 
+::: callout-tip
+Check out the `infer` package for this. Very cool.
 :::
 
 ### Part C
 
-::: {.callout-tip}
+::: callout-tip
 1/4
 :::
 
@@ -282,15 +281,15 @@ $$
 
 The t value at (900-1) and a 90% confidence interval will be approx 1.645
 
-::: {.callout-tip}
-This is incomplete. What's the CI? 
+::: callout-tip
+This is incomplete. What's the CI?
 :::
 
 ## Question 3
 
 *Points: 5*
 
-::: {.callout-tip}
+::: callout-tip
 5/5
 :::
 
@@ -318,7 +317,7 @@ The specific critical value depends on the chosen significance level and degrees
 
 *Points: 5*
 
-::: {.callout-tip}
+::: callout-tip
 3.5/5
 :::
 
@@ -326,7 +325,7 @@ I hypothesize that fewer than 40% of registered voters approve of President Bide
 
 ### Part A
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -340,7 +339,7 @@ Point estimate of a sample is 37.9 itself.
 
 ### Part B
 
-::: {.callout-tip}
+::: callout-tip
 0.5/1
 :::
 
@@ -364,8 +363,8 @@ $$
 
 Which means confidence is around Confidence Interval = 0.379±0.0429
 
-::: {.callout-tip}
-Your ME is incorrect: 
+::: callout-tip
+Your ME is incorrect:
 
 ```{r}
 sample_proportion <- 0.379
@@ -385,7 +384,7 @@ sample_sd <- sqrt((sample_proportion*(1-sample_proportion))/sample_size)
 sample_sd
 ```
 
-The z-score for this threshold is: 
+The z-score for this threshold is:
 
 ```{r}
 z_score <- qnorm(0.05, lower.tail = F)
@@ -406,7 +405,7 @@ Totally, CI = \[0.3361, 0.4219\]
 
 ### Part C
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -418,7 +417,7 @@ The Null hypothesis is that the proportion of registered voters who approve of P
 
 ### Part D
 
-::: {.callout-tip}
+::: callout-tip
 0/1
 :::
 
@@ -452,8 +451,8 @@ Now, plug these values into the formula:
 
 z is approx: 0.371
 
-::: {.callout-tip}
-I'm having trouble working out how you got this number. Can you please include your calculations in the future. Here is what I got: 
+::: callout-tip
+I'm having trouble working out how you got this number. Can you please include your calculations in the future. Here is what I got:
 
 $$
 z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}
@@ -469,22 +468,22 @@ This makes more sense, because our sample proportion is smaller than our null pr
 
 For a one-tailed test, where you're testing whether the proportion is less than 40%, you need to find the area to the left of this test statistic on the standard normal distribution. Using a standard normal distribution table or calculator, you can find the one-tailed p-value.
 
-::: {.callout-tip}
-Correct. 
+::: callout-tip
+Correct.
 :::
 
-The one-tailed p-value for a z-value of 0.371 is approximately 0.150. 
+The one-tailed p-value for a z-value of 0.371 is approximately 0.150.
 
-::: {.callout-tip}
-Again, I'm not sure how you are getting this number. 
+::: callout-tip
+Again, I'm not sure how you are getting this number.
 
-For a z-score of 0.371, I would expect a p-value of: 
+For a z-score of 0.371, I would expect a p-value of:
 
 ```{r}
 pnorm(0.371, lower.tail = T)
 ```
 
-For the correct z-score, I get a p-value of: 
+For the correct z-score, I get a p-value of:
 
 ```{r}
 p_value <- pnorm(z_score, lower.tail = T)
@@ -494,8 +493,8 @@ p_value
 
 This p-value suggests that if the true proportion of registered voters who approve of President Biden is 40% (according to the null hypothesis), you would expect to obtain a sample proportion as extreme as 37.9% or less about 15% of the time by random chance alone. Since this p-value is greater than the typical significance level of 0.05 (5%), you would fail to reject the null hypothesis.
 
-::: {.callout-tip}
-Correct. Error carried forward.  
+::: callout-tip
+Correct. Error carried forward.
 :::
 
 Now, you can find the one-tailed p-value using the standard normal distribution. Since you're testing whether the proportion is less than 40% (p \< 0.40), you need to find the area to the left of this test statistic (z) value.
@@ -506,7 +505,7 @@ This means that if the true proportion of registered voters who approve of Presi
 
 ### Part E
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -526,7 +525,7 @@ Hypothesis tests provide a measure of the strength of evidence against the null 
 
 *Points: 5*
 
-::: {.callout-tip}
+::: callout-tip
 5/5
 :::
 
