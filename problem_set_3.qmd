@@ -105,25 +105,21 @@ B. 1. Sampling Variability: The sample is not large enough to hold for the rest 
 
 2.  Source of Bias: The countries data will be skewed depending on the 5 countries picked. 10 years is also not a large enough time compared to most countries existence, as most countries are older than this.
 
-```{=html}
 <!-- -->
-```
+
 C.  
 
-```{=html}
 <!-- -->
-```
+
 1.  Sampling Variability: The sample only takes for two countries. Educational administrators may be a good source if it is across many countries.
 2.  Source of Bias: The sample size is too small. Also there is no definition of the country being a democracy or not, this skews results.The time period is also not large enough to ensure there is no bias.
 
-```{=html}
 <!-- -->
-```
+
 D.  
 
-```{=html}
 <!-- -->
-```
+
 1.  Sampling Variability: it has a good number of countries, but it has not taken into account if the country is a democracy or not.
 2.  Source of bias: There have been more than 2/3rds countries as democracies compared to non-democracies in the last 25 years. Pure randomization might not yield good results when one of the classes is so small.
 
