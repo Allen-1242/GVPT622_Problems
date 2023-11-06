@@ -124,12 +124,13 @@ Do the data support my hypothesis? Be sure to explain the nature of the relation
 ```{r}
 library(vcd)
 data <- poliscidata::nes
-cross_tab <- CrossTable(data$libcon3, data$gun_importance3, chisq = TRUE)
-cross_tab
+data <- data[c('libcon3', 'gun_importance3'),]
+#cross_tab <- CrossTable(data$libcon3, data$gun_importance3, chisq = TRUE)
+#cross_tab
 ```
 
 ```{r}
-cross_tab$chisq
+data
 ```
 
 ```{r}
