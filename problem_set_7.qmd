@@ -2,12 +2,14 @@
 title: "Problem Set 7"
 subtitle: "Due date: 6 November"
 format: 
-  html:
+  pdf:
     self-contained: true
 toc: true
 editor: visual
 execute: 
-  echo: true
+  echo: false
+  warning: false
+  message: false
 ---
 
 Please upload your completed assignment to the ELMs course site (under the assignments menu). Remember to include an annotated script file for all work with R and show your math for all other problems (if applicable, or necessary). Please also upload your completed assignment to the Github repository that you have shared with us. *We should be able to run your script with no errors.*
@@ -212,4 +214,4 @@ barplot(table, main="Grouped Barplot", xlab="Importance", ylab="Counts", beside=
 legend("topleft", legend=rownames(table), fill=c("red", "blue", "green"))
 ```
 
-Not much difference
+Not much difference between values as visualized.
