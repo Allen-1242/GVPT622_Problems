@@ -66,12 +66,12 @@ names(Cross_tab_data) <- c('21-35', '36-50', '51-65', '66-plus')
 rownames(Cross_tab_data) <- c('not at all', 'somewhat', 'very much')
 
 
-Cross_tab_data[1,1] <- 4
+Cross_tab_data[1,1] <- 5
 Cross_tab_data[1,2] <- 1
 Cross_tab_data[1,3] <- 2
 Cross_tab_data[1,4] <- 3
 
-Cross_tab_data[2,1] <- 2
+Cross_tab_data[2,1] <- 6
 Cross_tab_data[2,2] <- 5
 Cross_tab_data[2,3] <- 3
 Cross_tab_data[2,4] <- 4
@@ -95,23 +95,93 @@ Do the data support my hypothesis? Be sure to explain the nature of the relation
 
 Ans 1B:
 
-Hypothesis: The older someone is , the more likely it is that they like watching golf
+To determine if the data support the hypothesis that "the older someone is, the more they like watching golf," we can look at the pattern of responses across the age groups, particularly focusing on the "very much" category as an indicator of liking golf a lot.
 
-Null hypothesis: The older someone is, has no effect on how much they like watching golf
+Here is the breakdown of the "very much" category across the different age ranges:
 
-To see the differences between the categories we can run a simple chi square to extract the differences
+-   21-35: 1 respondent (9.1% of the "very much" responses)
+
+-   36-50: 3 respondents (27.3% of the "very much" responses)
+
+-   51-65: 3 respondents (27.3% of the "very much" responses)
+
+-   66-plus: 4 respondents (36.4% of the "very much" responses)
+
+Here's the distribution for the "somewhat" category:
+
+-   21-35: 6 respondents (33.3% of the "somewhat" responses)
+
+-   36-50: 5 respondents (27.8% of the "somewhat" responses)
+
+-   51-65: 3 respondents (16.7% of the "somewhat" responses)
+
+-   66-plus: 4 respondents (22.6% of the "somewhat" responses)
+
+In the "somewhat" category, we see that the 36-50 age group has the highest number of respondents, which might suggest a spike in interest in this middle age group.
+
+When considering both "somewhat" and "very much" categories together, we can conclude that the data generally support the hypothesis that older individuals are more likely to enjoy watching golf, but the relationship is not strictly linear as there's a noticeable interest in the 36-50 age range.
+
+Finally, it is also important to consider the actual number of respondents in each age group, as percentages alone can sometimes be misleading. The 66-plus age group not only has the highest percentage of "very much" responses but also has the highest number of respondents overall, which strengthens the claim that older individuals are more inclined to enjoy watching golf according to the data provided.
+
+We can use a chi square test to really determine the variable relationships.
 
 ### Part C
 
 *Points: 2*
 
-Compute (by hand) the chi-square statistic to test the null hypothesis of no relationship between these two variables. Be sure to show your work.
+Ans C2: Calculating the chi square value by hand
+
+**For "Not at all" interest:**
+
+-   21-35: χ112=(5−3.3)23.3=(1.7)23.3=2.893.3≈0.876, χ112​=3.3(5−3.3)2​=3.3(1.7)2​=3.32.89​≈0.876
+
+-   36-50: χ122=(1−2.475)22.475=(1.475)22.475=2.1762.475≈0.879, χ122​=2.475(1−2.475)2​=2.475(1.475)2​=2.4752.176​≈0.879
+
+-   51-65: χ132=(2−2.2)22.2=(0.2)22.2=0.042.2≈0.018, χ132​=2.2(2−2.2)2​=2.2(0.2)2​=2.20.04​≈0.018
+
+-   66-plus: χ142=(3−3.025)23.025=(−0.025)23.025=0.0006253.025≈0.0002, χ142​=3.025(3−3.025)2​=3.025(−0.025)2​=3.0250.000625​≈0.0002
+
+**For "Somewhat" interest:**
+
+-   21-35: χ212=(6−5.4)25.4=(0.6)25.4=0.365.4≈0.067, χ212​=5.4(6−5.4)2​=5.4(0.6)2​=5.40.36​≈0.067
+
+-   36-50: χ222=(5−4.05)24.05=(0.95)24.05=0.90254.05≈0.223, χ222​=4.05(5−4.05)2​=4.05(0.95)2​=4.050.9025​≈0.223
+
+-   51-65: χ232=(3−3.6)23.6=(−0.6)23.6=0.363.6≈0.1, χ232​=3.6(3−3.6)2​=3.6(−0.6)2​=3.60.36​≈0.1
+
+-   66-plus: χ242=(4−4.95)24.95=(−0.95)24.95=0.90254.95≈0.182, χ242​=4.95(4−4.95)2​=4.95(−0.95)2​=4.950.9025​≈0.182
+
+**For "Very much" interest:**
+
+-   21-35: χ312=(1−3.3)23.3=(2.3)23.3=5.293.3≈1.603, χ312​=3.3(1−3.3)2​=3.3(2.3)2​=3.35.29​≈1.603
+
+-   36-50: χ322=(3−2.475)22.475=(0.525)22.475=0.27562.475≈0.111, χ322​=2.475(3−2.475)2​=2.475(0.525)2​=2.4750.2756​≈0.111
+
+-   51-65: χ332=(3−2.2)22.2=(0.8)22.2=0.642.2≈0.291, χ332​=2.2(3−2.2)2​=2.2(0.8)2​=2.20.64​≈0.291
+
+-   66-plus: χ342=(4−3.025)23.025=(0.975)23.025=0.95063.025≈0.314, χ342​=3.025(4−3.025)2​=3.025(0.975)2​=3.0250.9506​≈0.314
+
+Now we add all these individual chi-square values to get the total chi-square statistic:
+
+Total χ2=0.876+0.879+0.018+0.0002+0.067+0.223+0.1+0.182+1.603+0.111+0.291+0.314
+
+χ2=0.876+0.879+0.018+0.0002+0.067+0.223+0.1+0.182+1.603+0.111+0.291+0.314
+
+Total χ2=4.5644χ2=4.5644
+
+This is our chi-square statistic. To determine whether this is statistically significant, we would compare this to the critical value from the chi-square distribution with 6 degrees of freedom (since we have 3 degrees of freedom from interest categories minus 1,
 
 ### Part D
 
 *Points: 2*
 
 Using the chi-square statistic that you computed in question 1(c), can you reject the null hypothesis of no relationship between these two variables with 95% confidence? Why, or why not?
+
+Ans D:
+
+Using the previously calculated chi square value:
+
+Since our calculated χ² value of approximately 4.5644 is less than the critical value of 12.59, we do not reject the null hypothesis. There is not enough evidence to suggest a statistically significant relationship between age and the level of interest in watching golf at the 95% confidence level.
 
 ## Question 2
 
@@ -122,17 +192,24 @@ I hypothesize that people who identify as more liberal are less likely to see gu
 Do the data support my hypothesis? Be sure to explain the nature of the relationship (or lack thereof, if relevant). Report a chi-square statistic (it is fine to have R generate the statistic and p-value). What does the chi-square statistic tell you about whether you can reject the null hypothesis of no relationship between these two variables with 95% confidence? Why, or why not?
 
 ```{r}
-library(vcd)
 data <- poliscidata::nes
-data <- data[c('libcon3', 'gun_importance3'),]
-#cross_tab <- CrossTable(data$libcon3, data$gun_importance3, chisq = TRUE)
-#cross_tab
+data <- data[c('libcon3', 'gun_importance3')]
+table <- table(data$libcon3, data$gun_importance3)
+chi_sq_test <- chisq.test(table)
+chi_sq_test
 ```
 
-```{r}
-data
-```
+Based on the p value , we can reject the null hypothesis. Note that the degree of freedom is 4.
 
 ```{r}
-cross_tab$p
+table
 ```
+
+Based on the table itself, we can see that the contingency matrix itself does not support such an assumption as there is no direct pattern between liberal and gun violence
+
+```{r}
+barplot(table, main="Grouped Barplot", xlab="Importance", ylab="Counts", beside=TRUE, col=c("red", "blue", "green"))
+legend("topleft", legend=rownames(table), fill=c("red", "blue", "green"))
+```
+
+Not much difference
