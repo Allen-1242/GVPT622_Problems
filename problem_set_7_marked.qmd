@@ -42,7 +42,7 @@ rm(list=ls())
 
 *Total points: 10*
 
-::: {.callout-tip}
+::: callout-tip
 10/10
 :::
 
@@ -52,7 +52,7 @@ I hypothesize that the older someone is, the more they like watching golf. I con
 
 *Points: 4*
 
-::: {.callout-tip}
+::: callout-tip
 4/4
 :::
 
@@ -94,7 +94,7 @@ datasummary_crosstab(Age_Range ~ Golf_Watching, data = Cross_tab_dataframe)
 
 *Points: 2*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -136,7 +136,7 @@ We can use a chi square test to really determine the variable relationships.
 
 *Points: 2*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -180,8 +180,8 @@ Total χ2=0.876+0.879+0.018+0.0002+0.067+0.223+0.1+0.182+1.603+0.111+0.291+0.314
 
 Total χ2=4.5644χ2=4.5644
 
-::: {.callout-tip}
-The Chi-square statistic is 6.09. The difference appears to be a manual calculation error, not a misunderstanding. 
+::: callout-tip
+The Chi-square statistic is 6.09. The difference appears to be a manual calculation error, not a misunderstanding.
 :::
 
 This is our chi-square statistic. To determine whether this is statistically significant, we would compare this to the critical value from the chi-square distribution with 6 degrees of freedom (since we have 3 degrees of freedom from interest categories minus 1,
@@ -190,10 +190,10 @@ This is our chi-square statistic. To determine whether this is statistically sig
 
 *Points: 2*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 
-Error carried forward. 
+Error carried forward.
 :::
 
 Using the chi-square statistic that you computed in question 1(c), can you reject the null hypothesis of no relationship between these two variables with 95% confidence? Why, or why not?
@@ -208,7 +208,7 @@ Since our calculated χ² value of approximately 4.5644 is less than the critica
 
 *Points: 10*
 
-::: {.callout-tip}
+::: callout-tip
 8/10
 :::
 
@@ -230,8 +230,8 @@ Based on the p value , we can reject the null hypothesis. Note that the degree o
 table
 ```
 
-::: {.callout-tip}
-Remember to always look at the proportions within groups. Avoids spurious findings based only on larger populations. 
+::: callout-tip
+Remember to always look at the proportions within groups. Avoids spurious findings based only on larger populations.
 :::
 
 Based on the table itself, we can see that the contingency matrix itself does not support such an assumption as there is no direct pattern between liberal and gun violence
