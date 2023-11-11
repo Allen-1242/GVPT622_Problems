@@ -568,8 +568,32 @@ gss_data <- gss_data[!is.na(gss_data$vote12) & !is.na(gss_data$conarmy)]
 #Removing the vote12 = 3 population
 gss_data <- gss_data[vote12 != 3]
 
-datasummary_crosstab(conarmy ~ vote12, data = gss_data)
+datasummary_crosstab(vote12 ~ conarmy, data = gss_data)
 ```
+
+Some insights:
+
+### Key Observations:
+
+1.  **Voting Behavior Across Confidence Levels**:
+
+    -   The majority of respondents in each confidence level voted, with a slight decrease in the proportion of voters from Conarmy 1 to Conarmy 3.
+
+    -   The proportion of respondents who did not vote is consistently lower than those who voted in each confidence level.
+
+2.  **Ineligibility Rates**:
+
+    -   The ineligibility rate is lowest in Conarmy 1 (great deal of confidence) and highest in Conarmy 3 (hardly any confidence). This could suggest a correlation between confidence in the military and eligibility to vote, though this would require further investigation.
+
+3.  **Confidence in the Military and Voting**:
+
+    -   The data suggests a trend where respondents with higher confidence in the military are more likely to vote, but the differences are not stark.
+
+    -   It's important to perform a statistical test, such as Chi-Square, to determine if these observed differences are statistically significant.
+
+### Conclusion:
+
+This contingency table provides an overview of how different levels of confidence in the U.S. military correlate with voting behavior in the 2012 presidential election. While it suggests certain trends, a statistical test is necessary to confirm if these trends are significant or merely coincidental.
 
 ```{r}
 #Running a statisical test: 
