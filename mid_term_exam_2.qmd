@@ -587,7 +587,7 @@ print(chi_test)
 
 Based on the chi square test
 
--   he Chi-square statistic suggests a relationship between confidence in the military and voting behavior, but the p-value of 0.043 indicates that null hypothesis can be rejected which indicates that there is a slight relationship between voting and confidence in the military.
+-   The Chi-square statistic suggests a relationship between confidence in the military and voting behavior, but the p-value of 0.043 indicates that null hypothesis can be rejected which indicates that there is a slight relationship between voting and confidence in the military.
 
 -   The cross tab is not a great way to see the relationship. There seems to be a slight increase in those who trust the military and those who vote. This is verified by the chi square test.
 
@@ -597,7 +597,7 @@ Let's use a bar chart to check the relationship visually:
 
 ```{r}
 barplot(tab, main="Grouped Barplot", xlab="Voting Pattern", ylab="Counts", beside=TRUE, col=c("red", "blue", "green"))
-legend("topright", legend=rownames(tab), fill=c("red", "blue", "green"))
+legend("topright", legend=c('Trusts a lot', 'Trusts a little', 'Low Trust'), fill=c("red", "blue", "green"))
 ```
 
 Based on the graph there doesn't seem to be many conclusions drawn, this means that we need to trust the results of the statistical test and our visual inspection is not fine enough to make these differentiations.
@@ -651,6 +651,8 @@ Hence the values are:
     -   Observed in Category 2: 51
 
     -   Expected in Category 2: 38.62
+
+This is: (642 - 638.01)\^2/638.01 + (278 - 281.99)\^2/278 + (498 - 489.61)\^2/498 + (208 - 216.39)\^2/216.39 + (75 - 87.38)\^2/87.38 + (51 - 38.62)\^2/38.62
 
 Hence calculating the final Chi Square value = 6.273 totally by plugging it into the above formula.
 
