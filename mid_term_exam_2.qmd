@@ -24,9 +24,8 @@ Please include all work (and computations) necessary to answer the questions.
 :::
 
 ```         
-::: {.callout-note}
+{.callout-note}
 Please note that the dataset gss and nes are downloaded from the ELMS site and will not be automatically downloaded in this script. I have included the datasets used in the Github upload
-:::
 ```
 
 **Total points: 26**
@@ -494,7 +493,7 @@ $$
 
 Which is approx 1.67. This value is used to asses how strong the relationship is against the null hypothesis.
 
-Although we will note that this is specific for this one case. Test statistics in general can be whatever metric is chosen. We can do t tests, z tests, two sample t tests, chi square tests, anovas etc depending on the type of data is being diagnosed.
+Although we will note that this is specific for this one case. Test statistics in general can be whatever statistic is chosen. We can do t tests, z tests, two sample t tests, chi square tests, anovas etc depending on the type of data is being diagnosed.
 
 #### Part C
 
