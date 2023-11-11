@@ -23,6 +23,12 @@ While this is an open-note exam, you are not to receive assistance from anyone e
 Please include all work (and computations) necessary to answer the questions.
 :::
 
+```         
+::: {.callout-note}
+Please note that the dataset gss and nes are downloaded from the ELMS site and will not be automatically downloaded in this script. I have included the datasets used in the Github upload
+:::
+```
+
 **Total points: 26**
 
 ### Question 1
@@ -679,11 +685,11 @@ Using these data, what is the point estimate for the mean conservatism/liberalis
 
 **Ans 2 A:**
 
-Based on the data provided:
+Based on the data :
 
--   The point estimate for the mean conservatism/liberalism score among those that disapprove of fracking (fracking = 3) is 2.0.
+-   The point estimate for the mean conservatism/liberalism score among those that disapprove of fracking (fracking = 3) is 3.5.
 
--   The point estimate for the mean conservatism/liberalism score among those that approve of fracking (fracking = 1) is 6.6.
+-   The point estimate for the mean conservatism/liberalism score among those that approve of fracking (fracking = 1) is 5.10
 
 These point estimates represent the average scores for liberalism/conservatism (with higher scores indicating more conservatism) within each group.
 
@@ -706,6 +712,7 @@ Alternative Hypothesis: The mean libcon7 score for both groups is not going to b
 ```{r}
 #Cleaning the data, removing NA values and splitting it into wo groups
 library(data.table)
+nes_data <- read.csv("~/Documents/GitHub/GVPT622_Problems/nes.csv")
 nes_data <- as.data.table(nes_data)
 
 nes_data$fracking<- as.numeric(nes_data$fracking)
@@ -748,9 +755,9 @@ n1 = sample size of group 1 = 1578
 
 n2 = sample size of group 2 = 804
 
-s1 = the sample variance of group 1 = 1.62
+s1 = the sample variance of group 1 = 1.52
 
-s2 = The sample variance of group 2 = 2.22
+s2 = The sample variance of group 2 = 1.22
 
 Now plugging the values in,
 
@@ -758,7 +765,7 @@ $$
 t  =  (5.11 - 3.55)/\sqrt((1.62/804 +2.22/1578)
 $$
 
-Which is approx: 26.64.
+Which is approx: t = 26.64.
 
 The p_value for this t statistic at a 95% confidence interval is approx 4.6 \* 10\^-135. With such a very small p value, this indicates that there is a high significance that these two groups are very different.
 
@@ -766,7 +773,7 @@ In conclusion, we reject the null hypothesis and assume that there is significan
 
 **Alternative Approach:**
 
-In this case we actually cannot use the T test as the assumption of normality is disregarded.
+In this case we actually cannot use the T test as the assumption of normality is disregarded. I would have switched to a Mann-Whitney U test using ranking.
 
 ### Question 3
 
