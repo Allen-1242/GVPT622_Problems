@@ -18,9 +18,15 @@ Please upload your completed assignment to the ELMs course site (under the assig
 
 *Points: 5*
 
-For the following regression equation, $\hat{Y} = 8.5 + 6x + \epsilon$, the standard error for $\beta_0$ is 2.5, the standard error for $\beta_1$ is 3.5, and the sample size is 2000. Find the t-statistic, 95% confidence interval, and p-value (using a two-tailed test) for $\beta_1$. 
+For the following regression equation, $\hat{Y} = 8.5 + 6x + \epsilon$, the standard error for $\beta_0$ is 2.5, the standard error for $\beta_1$ is 3.5, and the sample size is 2000. Find the t-statistic, 95% confidence interval, and p-value (using a two-tailed test) for $\beta_1$.
 
 Is $\beta_1$ statistically significant at the 0.05-level with a two-tailed test? Why or why not?
+
+```{r}
+library(glm2)
+Regression_eq -> Y = Ax^2 + 6x + eplsicon
+
+```
 
 ## Question 2
 
@@ -40,8 +46,8 @@ Suppose you estimate a bivariate regression with a sample size of 102 and obtain
 
 Using the `states` dataset from the `poliscidata` package, produce a scatterplot of the variables `romney2012` and `hispanic10` (with `romney2012` as the dependent variable on the y-axis). Fit a regression line to the scatterplot. Describe the scatterplot and include a copy of it. Note any suspected outliers, if any (a visual inspection will suffice for this question).
 
-::: {.callout-note}
-The variable `romney2012` measures the percentage of the state’s vote that Mitt Romney received in the 2012 presidential election, and `hispanic10` indicates the percentage of the state’s population that identified as Hispanic in 2010.
+::: callout-note
+The variable `romney2012` measures the percentage of the state's vote that Mitt Romney received in the 2012 presidential election, and `hispanic10` indicates the percentage of the state's population that identified as Hispanic in 2010.
 :::
 
 ## Question 5
