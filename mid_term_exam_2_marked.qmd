@@ -34,7 +34,7 @@ Please note that the dataset gss and nes are downloaded from the ELMS site and w
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 1/2
 :::
 
@@ -62,8 +62,8 @@ Where:
 
 -   For a 90% confidence interval the z score is approx 1.645 with a double tailed test
 
-::: {.callout-tip}
-You need to use the t-statistic when working with means. 
+::: callout-tip
+You need to use the t-statistic when working with means.
 :::
 
 Plugging these values in and calculating:
@@ -82,7 +82,7 @@ The 90% confidence interval for the difference in the average weekly study time 
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -120,7 +120,7 @@ Either way we have proved that there is significant statistical difference in va
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -136,7 +136,7 @@ As an example, if we running a software method to identify individuals who might
 
 *1 point*
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -193,7 +193,7 @@ Based on these calculations, the sample of 900 with a standard deviation of 15 y
 
 *1 point*
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -217,7 +217,7 @@ This is because the outcome of the first draw affects the probability of the sec
 
 *1 point*
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -240,7 +240,7 @@ So option D: Not enough information to answer this question
 
 *1 point*
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -254,7 +254,7 @@ The probability representing the complement to the sample proportion of adults w
 
 *1 point*
 
-::: {.callout-tip}
+::: callout-tip
 0/1
 :::
 
@@ -284,15 +284,15 @@ So, the correct answer is **(a) More observations**, as this is the only option 
 
 These are of course generalization and not hard and fast rules , but usually these rules will hold.
 
-::: {.callout-tip}
-Both A and B are correct. 
+::: callout-tip
+Both A and B are correct.
 :::
 
 ### Question 9
 
 *1 point*
 
-::: {.callout-tip}
+::: callout-tip
 1/1
 :::
 
@@ -328,7 +328,7 @@ Option A: A 95% confidence interval around the sample mean includes the value 40
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -368,7 +368,7 @@ So, the probability that both rolls will be either odd or greater than four is 1
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -425,7 +425,7 @@ Hence the final probability will be 75/520 which is approx 14.4%
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -465,7 +465,7 @@ Therefore, the 95% confidence interval for the difference in the proportion of p
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -491,7 +491,7 @@ I am interested in estimating the average number of texts that University of Mar
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -527,7 +527,7 @@ Hence the confidence is around \[99.12, 110.88\] for a 95% confidence interval a
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -567,7 +567,7 @@ Although we will note that this is specific for this one case. Test statistics i
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -616,7 +616,7 @@ I hypothesize that, among only those that were eligible to vote, people with gre
 
 *3 points*
 
-::: {.callout-tip}
+::: callout-tip
 3/3
 :::
 
@@ -706,7 +706,7 @@ Based on the graph there doesn't seem to be many conclusions drawn, this means t
 
 *3 points*
 
-::: {.callout-tip}
+::: callout-tip
 3/3
 :::
 
@@ -770,7 +770,7 @@ Thus based on the calculated p_value, we reject the null hypothesis and assume t
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -790,7 +790,7 @@ I hypothesize that citizens who do not support fracking are less conservative th
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -810,7 +810,7 @@ These point estimates represent the average scores for liberalism/conservatism (
 
 *6 points*
 
-::: {.callout-tip}
+::: callout-tip
 6/6
 :::
 
@@ -902,7 +902,7 @@ I hypothesize that people who express that religion is important to them were mo
 
 *2 points*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -963,7 +963,7 @@ These percentages reflect the proportion of respondents who voted in each group,
 
 *6 points*
 
-::: {.callout-tip}
+::: callout-tip
 6/6
 :::
 
