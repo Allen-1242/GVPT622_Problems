@@ -17,7 +17,7 @@ Please upload your completed assignment to the ELMs course site (under the assig
 
 *Points: 10*
 
-::: {.callout-tip}
+::: callout-tip
 10/10
 :::
 
@@ -47,7 +47,7 @@ In the given table, the increase in the R-squared value from 0.05 in Model 1 to 
 
 *Points: 10*
 
-::: {.callout-tip}
+::: callout-tip
 10/10
 :::
 
@@ -80,8 +80,8 @@ table <- gtsummary::tbl_regression(model)
 table
 ```
 
-::: {.callout-tip}
-Your professional tables should always include variable labels that are meaningful for the reader. 
+::: callout-tip
+Your professional tables should always include variable labels that are meaningful for the reader.
 :::
 
 Key Findings:
@@ -106,8 +106,8 @@ This model shows that `nonSouth`, `edr`, and `pcthsg` are significant predictors
 
 To display the effects of a single variable we can set the others to zero, usually not the best way as there are effects of those other variables. So I am electing to set the other values to their mean value and then driving prediction from that.
 
-::: {.callout-tip}
-This is a cool approach, but it does not isolate the predicted effect of `pcthsg` on `vote`. This is a purely an aesthetic problem, not a conceptual one. I recommend using `marginaleffects::plot_predictions()` to answer this question. 
+::: callout-tip
+This is a cool approach, but it does not isolate the predicted effect of `pcthsg` on `vote`. This is a purely an aesthetic problem, not a conceptual one. I recommend using `marginaleffects::plot_predictions()` to answer this question.
 :::
 
 ```{r}
@@ -151,7 +151,7 @@ In cases where the zero values of predictors are not meaningful or possible (e.g
 
 *Points: 5*
 
-::: {.callout-tip}
+::: callout-tip
 5/5
 :::
 
@@ -186,7 +186,7 @@ Looking at the very significant Pvalue here, we can reject the null hypothes. Th
 
 *Points: 15*
 
-::: {.callout-tip}
+::: callout-tip
 15/15
 :::
 
