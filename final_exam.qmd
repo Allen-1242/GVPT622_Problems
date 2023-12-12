@@ -28,13 +28,51 @@ Please include all work (and computations) necessary to answer the questions.
 
 Suppose you estimate a bivariate regression model with a total sample size of 50 and obtain a standard error for $\beta_1$ of 2.50. What is the smallest regression coefficient ($\beta_1$) that you could have and still be able to reject the null hypothesis (of no relationship between $X_1$ and $Y$) at the 0.05 level with a one-tailed test?
 
+**Ans 1:**
+
+To determine the smallest regression coefficient (β1β1​) that would allow you to reject the null hypothesis at the 0.05 level with a one-tailed test, you need to consider the critical value from the t-distribution and the standard error of β1β1​.
+
+For a one-tailed test at the 0.05 significance level with a sample size of 50, the degrees of freedom for the t-distribution are n−2=50−2=48n−2=50−2=48, as two parameters (the intercept and the slope) are estimated in a simple linear regression.
+
+The critical value for a one-tailed test at the 0.05 level can be obtained from the t-distribution table or calculated. Let's calculate it:
+
+1.  Find the t-critical value for a one-tailed test at the 0.05 level with 48 degrees of freedom.
+
+2.  Multiply this critical value by the standard error of β1β1​ (which is 2.50) to find the smallest value of β1β1​ that would still allow you to reject the null hypothesis.
+
+I will perform these calculations now.
+
+The critical value for a one-tailed test at the 0.05 level with 48 degrees of freedom is approximately 1.677. Therefore, the smallest regression coefficient (β1β1​) that you could have and still be able to reject the null hypothesis at the 0.05 level with a one-tailed test is approximately 1.677×2.50≈4.191.677×2.50≈4.19.
+
+This means that if β1β1​ is 4.19 or greater, you can reject the null hypothesis of no relationship between X1X1​ and YY at the 0.05 significance level in a one-tailed test.
+
 ### Question 2
 
 I regress $Y$ on $X_1$ (i.e., $Y = \beta_0 + \beta_1 X_1$) and find that $\beta_1 = 4.20$, $SE_{\beta_1} = 1.90$, $t = 2.21$, $p = 0.01$, and a 95% confidence interval is \[0.48, 7.92\]. What is my best estimate of the effect of a two-unit change in $X$ on the mean of $Y$ in the population?
 
+**Ans 2:**
+
+To estimate the effect of a two-unit change in X1X1​ on the mean of YY in the population, you can use the estimated coefficient β1β1​ from your regression model. The regression coefficient β1β1​ represents the change in the dependent variable YY for a one-unit change in the independent variable X1X1​.
+
+Given that β1=4.20β1​=4.20, a two-unit change in X1X1​ would result in a change of 2×β12×β1​ in YY.
+
+Let's calculate this:
+
+The best estimate of the effect of a two-unit change in X1X1​ on the mean of YY in the population is 8.48.4. This means that, according to your regression model, a two-unit increase in X1X1​ is associated with an average increase of 8.4 units in YY.
+
 ### Question 3
 
 I conduct an OLS regression with a sample size of 90 and 5 independent variables. To determine a p-value for each coefficient, I would examine a t-distribution with how many degrees of freedom?
+
+**Ans 3:**
+
+The usual convention is to take the number of independent variables and subtract it from the total sample size. So if there are 5 independent variables along with an intercept, the total number of degrees of freedom would be:
+
+df = 90 - (5+1)
+
+df = 84
+
+So we would examine a t-distribution with 84 degrees of freedom totally.
 
 ### Question 4
 
@@ -50,7 +88,21 @@ D.  None of the above: all of these (above) will affect the confidence interval,
 
 E.  There is not enough information to answer this question.
 
-### Question 5
+**Ans 4:**
+
+1.   Total sample size can affect confidence intervals as the larger the number of data points the narrower the confidence intervals becomes, i.e. the more accurate readings you can get
+
+```{=html}
+<!-- -->
+```
+2.  Larger Mean-Square error usually translates to wider confidence intervals indicating lower accuracy. There are some exceptions to this but it largely holds good.
+3.  Value of X depending on how far it is from the mean of the series will have an effect on the interval. Broadly speaking the further it is from the mean the larger the confidence interval will be.
+
+So the final answer will be:
+
+D. None of the above: all of these (above) will affect the confidence interval
+
+### **Question 5**
 
 I regress $Y$ on $X$ and find that $\beta_1$ has a two-tailed p-value of 0.04. Which of the following statements is most accurate?
 
@@ -63,6 +115,16 @@ C.  A 90% confidence interval around $\beta_1$ will not contain zero,
 D.  All of the above,
 
 E.  None of the above and/or there is not enough information.
+
+**Ans 5:**
+
+1.  For very small sample sizes it could be possible that the confidence bounds straddle zero and hence the values on the lower and upper bounds will have different signs
+2.  The absolute value for large values at a 95% confidence interval will be 1.96 , so it will be a little more than 1.96
+3.  A value will not contain 0
+
+Hence the final answer will be:
+
+D: All of the above
 
 ### Question 6
 
@@ -78,9 +140,33 @@ D.  All of the above,
 
 E.  None of the above and/or there is not enough information.
 
+**Ans 6:**
+
+Looking at the three Betas, we have Beta 1 not containing zero and positive hence it is statistically significant at 0.05 for a double tailed test. Beta 2 contains a zero and is hence probably not staticitally significant at the 0.05 level. We also cannot tell if it is positive or negative. Beta 3 does not contain a zero and is negative, hence can be viewed as statically significant.
+
+Based on our understanding, the most accurate statement will be:
+
+C: $\beta_1$ will have a positive coefficient, $\beta_2$ and $\beta_3$ will have negative coefficients, and only $\beta_1$ and $\beta_3$ are statistically significant at the 0.05 level (two-tailed)
+
 ### Question 7
 
 Suppose I estimate a regression with two independent variables and obtain a $R^2$ of 0.40 where the Residual Sum of Squares is equal to 5,150. What does the Total Sum of Squares equal in this regression model?
+
+**Ans 7:**
+
+We know that:
+
+$$
+R^2  =  1 - RSS/TSS
+$$
+
+Hence,
+
+$$
+0.40  =  1 - 5,150/TSS
+$$
+
+Or TSS = 8,583.33 approx
 
 ### Question 8
 
@@ -93,6 +179,8 @@ B.  $X_1$ has a larger substantive effect on $Y$ than $X_2$ and $X_1$ is more st
 C.  $X_1$ has a larger substantive effect on $Y$ than $X_2$, but the effect of $X_2$ is more statistically significant,
 
 D.  None of the above and/or there is not enough information.
+
+**Ans 8:**
 
 ### Question 9
 
