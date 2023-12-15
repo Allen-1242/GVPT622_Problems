@@ -28,21 +28,21 @@ Suppose you estimate a bivariate regression model with a total sample size of 50
 
 **Ans 1:**
 
-To determine the smallest regression coefficient (β1β1​) that would allow you to reject the null hypothesis at the 0.05 level with a one-tailed test, you need to consider the critical value from the t-distribution and the standard error of β1β1​.
+To do this we can use the T-Statistic value:
 
-For a one-tailed test at the 0.05 significance level with a sample size of 50, the degrees of freedom for the t-distribution are n−2=50−2=48n−2=50−2=48, as two parameters (the intercept and the slope) are estimated in a simple linear regression.
+We know that:
 
-The critical value for a one-tailed test at the 0.05 level can be obtained from the t-distribution table or calculated. Let's calculate it:
+$$
+T\_Statisic  =  BetaCoef/StandardError
+$$
 
-1.  Find the t-critical value for a one-tailed test at the 0.05 level with 48 degrees of freedom.
+Degree of freedom = 50-2 = 48
 
-2.  Multiply this critical value by the standard error of β1β1​ (which is 2.50) to find the smallest value of β1β1​ that would still allow you to reject the null hypothesis.
+Critical value for 48 degrees of freedom for 0.05 and a single tailed test = 1.68 approx
 
-As defined:
+Standard Error = 2.50
 
-The critical value for a one-tailed test at the 0.05 level with 48 degrees of freedom is approximately 1.677. Therefore, the smallest regression coefficient (β1β1​) that you could have and still be able to reject the null hypothesis at the 0.05 level with a one-tailed test is approximately 1.677×2.50≈4.191.677×2.50≈4.19.
-
-This means that if β1β1​ is 4.19 or greater, you can reject the null hypothesis of no relationship between X1X1​ and YY at the 0.05 significance level in a one-tailed test.
+Hence plugging in the values, the smallest value will be: 4.19
 
 ### Question 2
 
@@ -50,13 +50,13 @@ I regress $Y$ on $X_1$ (i.e., $Y = \beta_0 + \beta_1 X_1$) and find that $\beta_
 
 **Ans 2:**
 
-To estimate the effect of a two-unit change in X1X1​ on the mean of YY in the population, you can use the estimated coefficient β1β1​ from your regression model. The regression coefficient β1β1​ represents the change in the dependent variable YY for a one-unit change in the independent variable X1X1​.
+To estimate the effect of a two-unit change in X1​ on the mean of Y in the population, we can use the estimated coefficient Beta1​ from the regression model. The regression coefficient Beta1​ represents the change in the dependent variable Y for a one-unit change in the independent variable X1​.
 
-Given that β1=4.20β1​=4.20, a two-unit change in X1X1​ would result in a change of 2×β12×β1​ in YY.
+Given that Beta = 4.20, a two-unit change in X1​ would result in a change of 2×Beta1​ in YY.
 
-Let's calculate this:
+Plugging in values:
 
-The best estimate of the effect of a two-unit change in X1X1​ on the mean of YY in the population is 8.48.4. This means that, according to your regression model, a two-unit increase in X1X1​ is associated with an average increase of 8.4 units in YY.
+The best estimate of the effect of a two-unit change in X1​ on the mean of Y in the population is 8.48.4. This means that, according to our regression model, a two-unit increase in X1​ is associated with an average increase of 8.4 units in Y.
 
 ### Question 3
 
@@ -136,7 +136,7 @@ E.  None of the above and/or there is not enough information.
 
 **Ans 6:**
 
-Looking at the three Betas, we have Beta 1 not containing zero and positive hence it is statistically significant at 0.05 for a double tailed test. Beta 2 contains a zero and is hence probably not staticitally significant at the 0.05 level. We also cannot tell if it is positive or negative. Beta 3 does not contain a zero and is negative, hence can be viewed as statically significant.
+Looking at the three Betas, we have Beta 1 not containing zero and positive hence it is statistically significant at 0.05 for a double tailed test. Beta 2 contains a zero and is hence probably not statistically significant at the 0.05 level. We also cannot tell if it is positive or negative. Beta 3 does not contain a zero and is negative, hence can be viewed as statically significant.
 
 Based on our understanding, the most accurate statement will be:
 
@@ -176,6 +176,14 @@ D.  None of the above and/or there is not enough information.
 
 **Ans 8:**
 
+-   **Substantive Effect Size**: The coefficients (-0.87 for X1​ and 3.52 for X2​) indicate the magnitude of the effect each variable has on Y. However, without knowing the units or scale of X1​ and X2​, we cannot conclusively say which has a larger substantive effect. For instance, a small change in a variable with a small coefficient might have a more substantial effect than a large change in a variable with a large coefficient, depending on the scale of the variables.
+
+-   **Statistical Significance**: The p-values (0.001 for X1​ and 0.04 for X2​) indicate the statistical significance of the effects. While X1​'s effect is more statistically significant (lower p-value), this does not directly relate to the substantive effect size.
+
+Hence the final answer is:
+
+D. None of the above and/or there is not enough information.
+
 ### Question 9
 
 I regress $Y$ on $X_1$ (i.e., $Y = \beta_0 + \beta_1 X_1$) and obtain a $R^2$ of 0.45. Then, I regress $Y$ on both $X_1$ and $X_2$ (i.e., $Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2$) and obtain a $R^2$ of 0.53. Which of the following statements must be true?
@@ -191,8 +199,8 @@ D.  All of the above: all of these statements are true.
 **Ans 9:**
 
 1.  Correlation cannot be directly to the Variance that is explained by X1 or X2. You can have a variable that is highly correlated and yet does not explain a lot of the variance
-2.  Statistical significance can also not be explained solely through Rsquared values.
-3.  X2 and X1 together has a larger Rsquared compared to simply X1. This means that the varience of Y that is explained by X1 and X2 together is more than that what is explained solely by X1,
+2.  Statistical significance can also not be explained solely through R squared values.
+3.  X2 and X1 together has a larger R squared compared to simply X1. This means that the varience of Y that is explained by X1 and X2 together is more than that what is explained solely by X1,
 
 Hence C: The model with $X_1$ and $X_2$ explains more of the variation in $Y$ than a model with just $X_1$,
 
@@ -206,7 +214,7 @@ $$
 
 **Ans 10 :**
 
-Yes, that might be an explanation of why the variable 'South' is negative.
+Yes, the negative coefficient on the South variable might indicate that southern states have a lower voter turnout, potentially due to a lower proportion of high school graduates, as the positive coefficient on Percent High School Graduates suggests a link between higher education levels and increased voter turnout.
 
 ## Applied Questions
 
@@ -348,7 +356,22 @@ table_3 <- tbl_regression(model_3,
 table_3
 ```
 
-Note add the analysis given:
+Prediction and Visualization of the variable:
+
+```{r}
+# Predict literacy rates using the model across a range of democratization scores
+world_df_final$predicted_literacy <- predict(model_3, newdata = world_df_final)
+
+# Create the plot
+ggplot(world_df_final, aes(x = dem_score14, y = predicted_literacy)) +
+  geom_point() +  # Plot the actual points
+  geom_smooth(method = "lm", se = FALSE) +  # Add a linear regression line
+  labs(x = "Level of Democratization", y = "Predicted Literacy Rate", 
+       title = "Predicted Literacy Rate as a Function of Democratization") +
+  theme_minimal()
+```
+
+Based on the graph we can see that the predicted literacy level is positively related with the level of Democratization. This is backed by the regression results that give the beta of democratization as a positive value.
 
 ### Question 12
 
@@ -473,13 +496,6 @@ We have:
 
 Hence the total equation would be:
 
-1.  $$
-    ObamaVoteExpected  =  intercept + (coef\_cig\_tax * cig\_tax) + (coef\_college\_tax * college\_tax) + (coef\_union07 * union07) + (coef\_South * South)
-    $$
-
-```{=html}
-<!-- -->
-```
 1.  $$
     ObamaVoteExpected  =  intercept + (coef\_cig\_tax * cig\_tax) + (coef\_college\_tax * college\_tax) + (coef\_union07 * union07) + (coef\_South * South)
     $$
