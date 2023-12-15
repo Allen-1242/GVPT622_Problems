@@ -8,7 +8,7 @@ execute:
   echo: true
 ---
 
-Please read all of the questions and tables carefully and follow all instructions. Each question has an allotted point value. Be as thorough and specific as possible; extra calculations and incorrect information, even in the presence of correct information, will result in point deductions. Be sure to show all formulas and all necessary work to answer the questions. You may upload your completed exam to the Elms course site.
+Please read all of the questions and tables carefully and follow all instructions. Each question has an allotted point value. Be as thorough and specific as possible; extra calculations and incorrect information, even in the presence of correct information, will result in point dedu ctions. Be sure to show all formulas and all necessary work to answer the questions. You may upload your completed exam to the Elms course site.
 
 ::: callout-note
 While this is an open-note exam, you are not to receive assistance from anyone else. As usual, the Honor Code applies.
@@ -536,7 +536,6 @@ Degrees of Freedom = 50 - 5 \[Number of Variables - Variable Parameters\]
 Hence the t_value for this would be:
 
 ```{r}
-#Note explaining why the 0.95 and not 0.90 
 qt(0.95, 45)
 ```
 
