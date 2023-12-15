@@ -42,7 +42,7 @@ Critical value for 48 degrees of freedom for 0.05 and a single tailed test = 1.6
 
 Standard Error = 2.50
 
-Hence plugging in the values, the smallest value will be: 4.19
+Hence plugging in the values, the smallest value will be: 4.19 as a coefficient.
 
 ### Question 2
 
@@ -52,7 +52,7 @@ I regress $Y$ on $X_1$ (i.e., $Y = \beta_0 + \beta_1 X_1$) and find that $\beta_
 
 To estimate the effect of a two-unit change in X1​ on the mean of Y in the population, we can use the estimated coefficient Beta1​ from the regression model. The regression coefficient Beta1​ represents the change in the dependent variable Y for a one-unit change in the independent variable X1​.
 
-Given that Beta = 4.20, a two-unit change in X1​ would result in a change of 2×Beta1​ in YY.
+Given that Beta = 4.20, a two-unit change in X1​ would result in a change of 2×Beta1​ in Y.
 
 Plugging in values:
 
@@ -138,7 +138,7 @@ E.  None of the above and/or there is not enough information.
 
 Looking at the three Betas, we have Beta 1 not containing zero and positive hence it is statistically significant at 0.05 for a double tailed test. Beta 2 contains a zero and is hence probably not statistically significant at the 0.05 level. We also cannot tell if it is positive or negative. Beta 3 does not contain a zero and is negative, hence can be viewed as statically significant.
 
-Based on our understanding, the most accurate statement will be:
+Based on this understanding, the most accurate statement will be:
 
 C: $\beta_1$ will have a positive coefficient, $\beta_2$ and $\beta_3$ will have negative coefficients, and only $\beta_1$ and $\beta_3$ are statistically significant at the 0.05 level (two-tailed)
 
