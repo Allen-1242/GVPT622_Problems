@@ -294,7 +294,7 @@ ggplot(world_literacy_df, aes(x = spendeduc, y = literacy)) +
 
 Based on the movement of the line we can see that there is a slight positive relationship between the two variables. This is consistent with the other methods we have employed to check the relationship.
 
-Based on this, we can conclude that there is a slight but positive increase of literacy based on education spend.
+Based on this, we can conclude that there is a slight but positive increase of literacy based on education spend. We can also conclude that yes, countries that spend more money on education appear to have a higher literacy rate.
 
 #### Part B
 
@@ -321,7 +321,7 @@ table_2 <- tbl_regression(model_2,
 table_2
 ```
 
-Based on table results we can see that the P_value for the spending of education drops significantly such that it is not statically significant anymore. The estimate is still positive though. This indicates that the variable democratization is a confounding variable whose effects need to be taken into account if there is analysis to be done on the relationship between literacy and education spending.
+Based on table results we can see that the P_value for the spending of education drops significantly such that it is not statically significant anymore. The estimate is still positive though. This indicates that the variable democratization is a confounding variable whose effects need to be taken into account if there is analysis to be done on the relationship between literacy and education spending. The beta for education spending has decreased from 1.7 to 0.26.
 
 ```{r}
 cor.test(world_df_spend$spendeduc, world_df_spend$dem_score14)
