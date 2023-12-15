@@ -1,13 +1,11 @@
 ---
 title: "Final Exam"
 format: 
-  html:
+  pdf:
     self-contained: true
 editor: visual
 execute: 
   echo: true
-  message: false
-  warning: false
 ---
 
 Please read all of the questions and tables carefully and follow all instructions. Each question has an allotted point value. Be as thorough and specific as possible; extra calculations and incorrect information, even in the presence of correct information, will result in point deductions. Be sure to show all formulas and all necessary work to answer the questions. You may upload your completed exam to the Elms course site.
@@ -451,7 +449,7 @@ Interpreting the Intercept:
 
 3.  **Role in the Model**: The primary role of the intercept in a regression model is to ensure that the regression line correctly models the relationship between the dependent and independent variables over the range in which the data exist. It adjusts the height of the regression line and is essential for the model's accuracy, but its value should be interpreted in the context of the specific variables and the data being analyzed.
 
-In summary, while the intercept in your model is statistically significant, its practical interpretation should be approached with caution due to the improbability of the independent variables simultaneously taking on zero values in the real world. The value of the intercept is more informative when considered in conjunction with the coefficients of the independent variables.
+In summary, while the intercept in our model is statistically significant, its practical interpretation should be approached with caution. The value of the intercept is more informative when considered in conjunction with the coefficients of the independent variables.
 
 #### Part C
 
@@ -529,9 +527,14 @@ qt(0.95, 45)
 Hence the upper and lower bounds of the confidence interval would be:
 
 ```{r}
-lower_bound <- coef_south - t_value * SE_south
-upper_bound <- coef_south + t_value * SE_south
+lower_bound <- 1.393 - 1.679427 * 2.58
+upper_bound <- 1.393 + 1.679427 * 2.58
+
+lower_bound
+upper_bound
 ```
+
+Hence the confidence interval runs from \[ -2.93, 5.725\]
 
 #### Part E
 
@@ -541,10 +544,10 @@ What is the null hypothesis that the F-test in this regression output is testing
 
 **Ans 12 E:**
 
-The F-test in a multiple regression analysis is used to test the null hypothesis that all of the regression coefficients in the model are equal to zero. This hypothesis essentially posits that the model, as a whole, has no explanatory power in predicting the dependent variable.
+The F-test in a multiple regression analysis is used to test the null hypothesis that all of the regression coefficients in the model are equal to zero. This hypothesis essentially assumes that the model, as a whole, has no explanatory power in predicting the dependent variable.
 
-In the context of your regression model, which includes the independent variables `cig_tax`, `college`, `union07`, and `south` to predict `obama08` (the percentage of a state's vote that President Obama received in the 2008 U.S. presidential election), the null hypothesis for the F-test can be stated as follows:
+In the context of this regression model, which includes the independent variables `cig_tax`, `college`, `union07`, and `south` to predict `obama08` , the null hypothesis for the F-test can be stated as follows:
 
 **Null Hypothesis (H0):** The coefficients for `cig_tax`, `college`, `union07`, and `south` are all equal to zero, implying that none of these variables have a statistically significant effect on the percentage of votes for Obama.
 
-In other words, the F-test is checking whether there is any evidence to suggest that at least one of these independent variables is useful in predicting the dependent variable `obama08`. If the F-test's p-value is small (typically less than 0.05), it suggests that you can reject the null hypothesis and conclude that at least one of the coefficients is significantly different from zero, indicating that the model provides some explanatory power. If the p-value is not small, you would not reject the null hypothesis, suggesting that your model might not be useful for explaining the variation in the dependent variable.
+In other words, the F-test is checking whether there is any evidence to suggest that at least one of these independent variables is useful in predicting the dependent variable `obama08`. If the F-test's p-value is small (typically less than 0.05), it suggests that we can reject the null hypothesis and conclude that at least one of the coefficients is significantly different from zero, indicating that the model provides some explanatory power. If the p-value is not small, we would not reject the null hypothesis.
