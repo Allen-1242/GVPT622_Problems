@@ -24,7 +24,7 @@ Please include all work (and computations) necessary to answer the questions.
 
 ### Question 1
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -50,7 +50,7 @@ Hence plugging in the values, the smallest value will be: 4.19 as a coefficient.
 
 ### Question 2
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -68,7 +68,7 @@ The best estimate of the effect of a two-unit change in X1​ on the mean of Y i
 
 ### Question 3
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -86,7 +86,7 @@ So we would examine a t-distribution with 84 degrees of freedom totally.
 
 ### Question 4
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -114,7 +114,7 @@ D. None of the above: all of these (above) will affect the confidence interval
 
 ### **Question 5**
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -142,7 +142,7 @@ D: All of the above
 
 ### Question 6
 
-::: {.callout-tip}
+::: callout-tip
 0/2
 :::
 
@@ -168,7 +168,7 @@ C: $\beta_1$ will have a positive coefficient, $\beta_2$ and $\beta_3$ will have
 
 ### Question 7
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -192,7 +192,7 @@ Or TSS = 8,583.33 approx
 
 ### Question 8
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -218,7 +218,7 @@ D. None of the above and/or there is not enough information.
 
 ### Question 9
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -242,7 +242,7 @@ Hence C: The model with $X_1$ and $X_2$ explains more of the variation in $Y$ th
 
 ### Question 10
 
-::: {.callout-tip}
+::: callout-tip
 1/2
 :::
 
@@ -256,8 +256,8 @@ $$
 
 Yes, the negative coefficient on the South variable might indicate that southern states have a lower voter turnout, potentially due to a lower proportion of high school graduates, as the positive coefficient on Percent High School Graduates suggests a link between higher education levels and increased voter turnout.
 
-::: {.callout-tip}
-This effect should be captured by our inclusion of a variable measuring the percent of HSGs. 
+::: callout-tip
+This effect should be captured by our inclusion of a variable measuring the percent of HSGs.
 :::
 
 ## Applied Questions
@@ -274,7 +274,7 @@ Use the `world` dataset to answer the following questions. The relevant variable
 
 *Points: 4*
 
-::: {.callout-tip}
+::: callout-tip
 4/4
 :::
 
@@ -348,7 +348,7 @@ Based on this, we can conclude that there is a slight but positive increase of l
 
 *Points: 5*
 
-::: {.callout-tip}
+::: callout-tip
 5/5
 :::
 
@@ -385,7 +385,7 @@ Just to test, the correlation between spend and democratization is positive and 
 
 *Points: 6*
 
-::: {.callout-tip}
+::: callout-tip
 6/6
 :::
 
@@ -439,7 +439,7 @@ Using the `states` dataset, use R to regress the variable `obama08` (the percent
 
 *Points: 6*
 
-::: {.callout-tip}
+::: callout-tip
 6/6
 :::
 
@@ -508,7 +508,7 @@ From the interpretation we can say that **union07** is is highly significant var
 
 *Points: 2*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -542,7 +542,7 @@ In summary, while the intercept in our model is statistically significant, its p
 
 *Points: 2*
 
-::: {.callout-tip}
+::: callout-tip
 2/2
 :::
 
@@ -576,7 +576,7 @@ Hence Obama would get 58.7% of the total vote based on the given values.
 
 *Points: 3*
 
-::: {.callout-tip}
+::: callout-tip
 3/3
 :::
 
@@ -627,7 +627,7 @@ Hence the confidence interval runs from \[ -2.93, 5.725\]
 
 *Points: 3*
 
-::: {.callout-tip}
+::: callout-tip
 3/3
 :::
 
